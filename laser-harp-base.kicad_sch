@@ -1,0 +1,3764 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "cf3798a1-72e5-4ca0-97f4-794237bd79bd")
+	(paper "A3")
+	(title_block
+		(title "Laser Harp - base board (MCU, comparators, laser driver, neopixels)")
+		(date "2026-10-19")
+		(rev "v0.1")
+		(company "Hack Club Halflife - Week 3 Music Week")
+	)
+	(lib_symbols
+		(symbol "power:PWR_FLAG"
+		(power global)
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "#FLG"
+			(at 0 1.905 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 0 3.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "flag power"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "PWR_FLAG_0_0"
+			(pin power_out line
+				(at 0 0 90)
+				(length 0)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(symbol "PWR_FLAG_0_1"
+			(polyline
+				(pts
+					(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+		(symbol "Local:ESP32-S3-Zero"
+		(pin_names (offset 1.016))
+		(exclude_from_sim no) (in_bom yes) (on_board yes)
+		(property "Reference" "U" (at 0 15.24 0) (effects (font (size 1.27 1.27))))
+		(property "Value" "ESP32-S3-Zero" (at 0 -15.24 0) (effects (font (size 1.27 1.27))))
+		(property "Footprint" "Local:ESP32-S3-Zero" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "https://www.waveshare.com/wiki/ESP32-S3-Zero" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(symbol "ESP32-S3-Zero_0_1"
+			(rectangle (start -10.16 12.7) (end 10.16 -12.7) (stroke (width 0.254) (type default)) (fill (type background))))
+		(symbol "ESP32-S3-Zero_1_1"
+			(pin power_in line (at -12.7 10.16 0) (length 2.54) (name "5V" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))
+			(pin power_in line (at -12.7 7.62 0) (length 2.54) (name "GND" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))
+			(pin power_out line (at -12.7 5.08 0) (length 2.54) (name "3V3" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27)))))
+			(pin bidirectional line (at -12.7 2.54 0) (length 2.54) (name "GP1" (effects (font (size 1.27 1.27)))) (number "4" (effects (font (size 1.27 1.27)))))
+			(pin bidirectional line (at -12.7 0 0) (length 2.54) (name "GP2" (effects (font (size 1.27 1.27)))) (number "5" (effects (font (size 1.27 1.27)))))
+			(pin bidirectional line (at -12.7 -2.54 0) (length 2.54) (name "GP3" (effects (font (size 1.27 1.27)))) (number "6" (effects (font (size 1.27 1.27)))))
+			(pin bidirectional line (at -12.7 -5.08 0) (length 2.54) (name "GP4" (effects (font (size 1.27 1.27)))) (number "7" (effects (font (size 1.27 1.27)))))
+			(pin bidirectional line (at -12.7 -7.62 0) (length 2.54) (name "GP5" (effects (font (size 1.27 1.27)))) (number "8" (effects (font (size 1.27 1.27)))))
+			(pin bidirectional line (at -12.7 -10.16 0) (length 2.54) (name "GP6" (effects (font (size 1.27 1.27)))) (number "9" (effects (font (size 1.27 1.27)))))
+			(pin bidirectional line (at 12.7 10.16 180) (length 2.54) (name "TX" (effects (font (size 1.27 1.27)))) (number "10" (effects (font (size 1.27 1.27)))))
+			(pin bidirectional line (at 12.7 7.62 180) (length 2.54) (name "RX" (effects (font (size 1.27 1.27)))) (number "11" (effects (font (size 1.27 1.27)))))
+			(pin bidirectional line (at 12.7 5.08 180) (length 2.54) (name "GP13" (effects (font (size 1.27 1.27)))) (number "12" (effects (font (size 1.27 1.27)))))
+			(pin bidirectional line (at 12.7 2.54 180) (length 2.54) (name "GP12" (effects (font (size 1.27 1.27)))) (number "13" (effects (font (size 1.27 1.27)))))
+			(pin bidirectional line (at 12.7 0 180) (length 2.54) (name "GP11" (effects (font (size 1.27 1.27)))) (number "14" (effects (font (size 1.27 1.27)))))
+			(pin bidirectional line (at 12.7 -2.54 180) (length 2.54) (name "GP10" (effects (font (size 1.27 1.27)))) (number "15" (effects (font (size 1.27 1.27)))))
+			(pin bidirectional line (at 12.7 -5.08 180) (length 2.54) (name "GP9" (effects (font (size 1.27 1.27)))) (number "16" (effects (font (size 1.27 1.27)))))
+			(pin bidirectional line (at 12.7 -7.62 180) (length 2.54) (name "GP8" (effects (font (size 1.27 1.27)))) (number "17" (effects (font (size 1.27 1.27)))))
+			(pin bidirectional line (at 12.7 -10.16 180) (length 2.54) (name "GP7" (effects (font (size 1.27 1.27)))) (number "18" (effects (font (size 1.27 1.27)))))
+		)
+		(embedded_fonts no)
+	)
+		(symbol "Connector_Generic:Conn_01x10"
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "J"
+			(at 0 12.7 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x10"
+			(at 0 -15.24 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x10, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "connector"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "Connector*:*_1x??_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "Conn_01x10_1_1"
+			(rectangle
+				(start -1.27 11.43)
+				(end 1.27 -13.97)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(rectangle
+				(start -1.27 10.287)
+				(end 0 10.033)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 7.747)
+				(end 0 7.493)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 5.207)
+				(end 0 4.953)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 2.667)
+				(end 0 2.413)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 0.127)
+				(end 0 -0.127)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 -2.413)
+				(end 0 -2.667)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 -4.953)
+				(end 0 -5.207)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 -7.493)
+				(end 0 -7.747)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 -10.033)
+				(end 0 -10.287)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 -12.573)
+				(end 0 -12.827)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at -5.08 10.16 0)
+				(length 3.81)
+				(name "Pin_1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 7.62 0)
+				(length 3.81)
+				(name "Pin_2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 5.08 0)
+				(length 3.81)
+				(name "Pin_3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 2.54 0)
+				(length 3.81)
+				(name "Pin_4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 0 0)
+				(length 3.81)
+				(name "Pin_5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -2.54 0)
+				(length 3.81)
+				(name "Pin_6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -5.08 0)
+				(length 3.81)
+				(name "Pin_7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -7.62 0)
+				(length 3.81)
+				(name "Pin_8"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "8"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -10.16 0)
+				(length 3.81)
+				(name "Pin_9"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "9"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -12.7 0)
+				(length 3.81)
+				(name "Pin_10"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "10"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+		(symbol "Switch:SW_Push"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "SW"
+			(at 1.27 2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SW_Push"
+			(at 0 -1.524 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 5.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 5.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Push button switch, generic, two pins"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "switch normally-open pushbutton push-button"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "SW_Push_0_1"
+			(circle
+				(center -2.032 0)
+				(radius 0.508)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 1.27) (xy 0 3.048)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(circle
+				(center 2.032 0)
+				(radius 0.508)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.54 1.27) (xy -2.54 1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at -5.08 0 0)
+				(length 2.54)
+				(name "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 5.08 0 180)
+				(length 2.54)
+				(name "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+		(symbol "Comparator:LM393"
+		(pin_names
+			(offset 0.127)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "U"
+			(at 3.81 3.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LM393"
+			(at 6.35 -3.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm393.pdf"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Low-Power, Low-Offset Voltage, Dual Comparators, DIP-8/SOIC-8/SOP-8/TSSOP-8/VSSOP-8"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_locked" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "cmp open collector"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "SOIC*3.9x4.9mm*P1.27mm* DIP*W7.62mm* SOP*5.28x5.23mm*P1.27mm* VSSOP*3x3mm*P0.65mm* TSSOP*4.4x3mm*P0.65mm*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "LM393_1_1"
+			(polyline
+				(pts
+					(xy -5.08 5.08) (xy 5.08 0) (xy -5.08 -5.08) (xy -5.08 5.08)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(polyline
+				(pts
+					(xy 3.302 -0.508) (xy 2.794 -0.508) (xy 3.302 0) (xy 2.794 0.508) (xy 2.286 0) (xy 2.794 -0.508)
+					(xy 2.286 -0.508)
+				)
+				(stroke
+					(width 0.127)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin open_collector line
+				(at 7.62 0 180)
+				(length 2.54)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -7.62 -2.54 0)
+				(length 2.54)
+				(name "-"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -7.62 2.54 0)
+				(length 2.54)
+				(name "+"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(symbol "LM393_2_1"
+			(polyline
+				(pts
+					(xy -5.08 5.08) (xy 5.08 0) (xy -5.08 -5.08) (xy -5.08 5.08)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(polyline
+				(pts
+					(xy 3.302 -0.508) (xy 2.794 -0.508) (xy 3.302 0) (xy 2.794 0.508) (xy 2.286 0) (xy 2.794 -0.508)
+					(xy 2.286 -0.508)
+				)
+				(stroke
+					(width 0.127)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin input line
+				(at -7.62 2.54 0)
+				(length 2.54)
+				(name "+"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -7.62 -2.54 0)
+				(length 2.54)
+				(name "-"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin open_collector line
+				(at 7.62 0 180)
+				(length 2.54)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(symbol "LM393_3_1"
+			(pin power_in line
+				(at -2.54 -7.62 90)
+				(length 3.81)
+				(name "V-"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at -2.54 7.62 270)
+				(length 3.81)
+				(name "V+"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "8"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+		(symbol "Device:R"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "R"
+			(at 2.032 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R"
+			(at 0 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at -1.778 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "R res resistor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "R_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "R_0_1"
+			(rectangle
+				(start -1.016 -2.54)
+				(end 1.016 2.54)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "R_1_1"
+			(pin passive line
+				(at 0 3.81 270)
+				(length 1.27)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 1.27)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+		(symbol "Device:C"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0.254)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "C"
+			(at 0.635 2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "C"
+			(at 0.635 -2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 0.9652 -3.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "cap capacitor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "C_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "C_0_1"
+			(polyline
+				(pts
+					(xy -2.032 0.762) (xy 2.032 0.762)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -2.032 -0.762) (xy 2.032 -0.762)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "C_1_1"
+			(pin passive line
+				(at 0 3.81 270)
+				(length 2.794)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 2.794)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+		(symbol "Device:R_Potentiometer_Trim"
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "RV"
+			(at -4.445 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R_Potentiometer_Trim"
+			(at -2.54 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Trim-potentiometer"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" "R"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Type" "POT"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=r0 2=wiper 3=r1"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "resistor variable trimpot trimmer"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "Potentiometer*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "R_Potentiometer_Trim_0_1"
+			(rectangle
+				(start 1.016 2.54)
+				(end -1.016 -2.54)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 1.524 0.762) (xy 1.524 -0.762)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.54 0) (xy 1.524 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "R_Potentiometer_Trim_1_1"
+			(pin passive line
+				(at 0 3.81 270)
+				(length 1.27)
+				(name "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 3.81 0 180)
+				(length 1.27)
+				(name "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 1.27)
+				(name "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+		(symbol "Transistor_FET:AO3400A"
+		(pin_names
+			(offset 0)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "Q"
+			(at 5.08 1.905 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "AO3400A"
+			(at 5.08 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 5.08 2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "N-MOSFET transistor, gate/source/drain"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "transistor NMOS N-MOS N-MOSFET"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "AO3400A_0_1"
+			(polyline
+				(pts
+					(xy 0.254 1.905) (xy 0.254 -1.905)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0.254 0) (xy -2.54 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0.762 2.286) (xy 0.762 1.27)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0.762 0.508) (xy 0.762 -0.508)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0.762 -1.27) (xy 0.762 -2.286)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0.762 -1.778) (xy 3.302 -1.778) (xy 3.302 1.778) (xy 0.762 1.778)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 1.016 0) (xy 2.032 0.381) (xy 2.032 -0.381) (xy 1.016 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(circle
+				(center 1.651 0)
+				(radius 2.794)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.54 2.54) (xy 2.54 1.778)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(circle
+				(center 2.54 1.778)
+				(radius 0.254)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(circle
+				(center 2.54 -1.778)
+				(radius 0.254)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.54 -2.54) (xy 2.54 0) (xy 0.762 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.921 0.381) (xy 3.683 0.381)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 3.302 0.381) (xy 2.921 -0.254) (xy 3.683 -0.254) (xy 3.302 0.381)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "AO3400A_1_1"
+			(pin input line
+				(at -5.08 0 0)
+				(length 2.54)
+				(name "G"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 2.54 -5.08 90)
+				(length 2.54)
+				(name "S"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 2.54 5.08 270)
+				(length 2.54)
+				(name "D"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+		(symbol "Connector_Generic:Conn_01x02"
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "J"
+			(at 0 2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x02"
+			(at 0 -5.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "connector"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "Connector*:*_1x??_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "Conn_01x02_1_1"
+			(rectangle
+				(start -1.27 1.27)
+				(end 1.27 -3.81)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(rectangle
+				(start -1.27 0.127)
+				(end 0 -0.127)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 -2.413)
+				(end 0 -2.667)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at -5.08 0 0)
+				(length 3.81)
+				(name "Pin_1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -2.54 0)
+				(length 3.81)
+				(name "Pin_2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+		(symbol "Device:C_Polarized"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0.254)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "C"
+			(at 0.635 2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "C_Polarized"
+			(at 0.635 -2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 0.9652 -3.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Polarized capacitor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "cap capacitor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "CP_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "C_Polarized_0_1"
+			(rectangle
+				(start -2.286 0.508)
+				(end 2.286 1.016)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -1.778 2.286) (xy -0.762 2.286)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -1.27 2.794) (xy -1.27 1.778)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start 2.286 -0.508)
+				(end -2.286 -1.016)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+		)
+		(symbol "C_Polarized_1_1"
+			(pin passive line
+				(at 0 3.81 270)
+				(length 2.794)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 2.794)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+		(symbol "74xGxx:74AHCT1G125"
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "U"
+			(at -10.16 7.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "74AHCT1G125"
+			(at 2.54 -7.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/sn74lvc1g125.pdf"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Single Buffer Gate Tri-State, Low-Voltage CMOS"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "Single Gate Buff Tri-State LVC CMOS"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "SOT?23* Texas?R-PDSO-G5?DCK* Texas?R-PDSO-N5?DRL* Texas?X2SON*0.8x0.8mm*P0.48mm*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "74AHCT1G125_0_1"
+			(polyline
+				(pts
+					(xy -7.62 6.35) (xy -7.62 -6.35) (xy 5.08 0) (xy -7.62 6.35)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+		)
+		(symbol "74AHCT1G125_1_1"
+			(pin input inverted
+				(at 0 10.16 270)
+				(length 7.62)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -15.24 0 0)
+				(length 7.62)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at -5.08 -10.16 90)
+				(length 5.08)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin tri_state line
+				(at 12.7 0 180)
+				(length 7.62)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at -5.08 10.16 270)
+				(length 5.08)
+				(name "VCC"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+		(symbol "LED:SK6812MINI"
+		(pin_names
+			(offset 0.254)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "D"
+			(at 5.08 5.715 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right bottom)
+			)
+		)
+		(property "Value" "SK6812MINI"
+			(at 1.27 -5.715 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_SK6812MINI_PLCC4_3.5x3.5mm_P1.75mm"
+			(at 1.27 -7.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Datasheet" "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf"
+			(at 2.54 -9.525 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Description" "RGB LED with integrated controller"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "RGB LED NeoPixel Mini addressable"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "LED*SK6812MINI*PLCC*3.5x3.5mm*P1.75mm*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "SK6812MINI_0_0"
+			(text "RGB"
+				(at 2.286 -4.191 0)
+				(effects
+					(font
+						(size 0.762 0.762)
+					)
+				)
+			)
+		)
+		(symbol "SK6812MINI_0_1"
+			(polyline
+				(pts
+					(xy 1.27 -2.54) (xy 1.778 -2.54)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 1.27 -3.556) (xy 1.778 -3.556)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.286 -1.524) (xy 1.27 -2.54) (xy 1.27 -2.032)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.286 -2.54) (xy 1.27 -3.556) (xy 1.27 -3.048)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 3.683 -1.016) (xy 3.683 -3.556) (xy 3.683 -4.064)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 4.699 -1.524) (xy 2.667 -1.524) (xy 3.683 -3.556) (xy 4.699 -1.524)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 4.699 -3.556) (xy 2.667 -3.556)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start 5.08 5.08)
+				(end -5.08 -5.08)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+		)
+		(symbol "SK6812MINI_1_1"
+			(pin output line
+				(at 7.62 0 180)
+				(length 2.54)
+				(name "DOUT"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 0 -7.62 90)
+				(length 2.54)
+				(name "VSS"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -7.62 0 0)
+				(length 2.54)
+				(name "DIN"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 0 7.62 270)
+				(length 2.54)
+				(name "VDD"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+		(symbol "Mechanical:MountingHole"
+		(pin_names
+			(offset 1.016)
+		)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "H"
+			(at 0 5.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 0 3.175 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "mounting hole"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "MountingHole*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "MountingHole_0_1"
+			(circle
+				(center 0 0)
+				(radius 1.27)
+				(stroke
+					(width 1.27)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+	)
+	(text "MCU" (exclude_from_sim no) (at 25 40 0) (effects (font (size 2.54 2.54)) (justify left bottom)) (uuid "4062767c-d432-4087-8867-eb8afa4e831b"))
+	(text "Sensor bar connector" (exclude_from_sim no) (at 25 140 0) (effects (font (size 2.54 2.54)) (justify left bottom)) (uuid "d8c9cade-a28d-443a-b75f-7a779e92b9f4"))
+	(text "Buttons" (exclude_from_sim no) (at 25 195 0) (effects (font (size 2.54 2.54)) (justify left bottom)) (uuid "a292d292-0c9b-41cb-ac38-b0d2811e9e86"))
+	(text "Comparators: beam broken = CMPn high" (exclude_from_sim no) (at 130 40 0) (effects (font (size 2.54 2.54)) (justify left bottom)) (uuid "802b8b2e-cbea-4c91-b9de-b84902affb77"))
+	(text "Threshold" (exclude_from_sim no) (at 262 50 0) (effects (font (size 2.54 2.54)) (justify left bottom)) (uuid "95f2ad48-f659-491b-a95d-11005c1a2a18"))
+	(text "Laser driver (low side switch)" (exclude_from_sim no) (at 300 40 0) (effects (font (size 2.54 2.54)) (justify left bottom)) (uuid "803245ad-a94b-4067-85f9-71146b1fabc9"))
+	(text "Laser headers" (exclude_from_sim no) (at 375 28 0) (effects (font (size 2.54 2.54)) (justify left bottom)) (uuid "236c9e5e-750c-4080-a29b-9d832dce9896"))
+	(text "Neopixel strip + 3V3 to 5V level shifter" (exclude_from_sim no) (at 300 124 0) (effects (font (size 2.54 2.54)) (justify left bottom)) (uuid "e8f96f2e-19f8-4416-960f-c0ecb00479b4"))
+	(text "Pull-ups for comparator outputs" (exclude_from_sim no) (at 130 190 0) (effects (font (size 2.54 2.54)) (justify left bottom)) (uuid "02cbfdd1-0d0b-4c5b-9609-985714466b32"))
+	(text "Decoupling" (exclude_from_sim no) (at 130 220 0) (effects (font (size 2.54 2.54)) (justify left bottom)) (uuid "461ff8b4-92ab-49cc-946d-e631d2d7e09a"))
+	(symbol (lib_id "power:PWR_FLAG") (at 30.48 54.61 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board no) (dnp no) (uuid "c5ba2c18-dad4-41a4-b9ff-0c6228f1d926")
+		(property "Reference" "#FLG01" (at 33.02 51.61 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "PWR_FLAG" (at 33.02 51.61 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes)))
+		(property "Footprint" "" (at 30.48 54.61 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 30.48 54.61 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "c5edbc92-af4f-404e-a03a-052399df37dc"))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "#FLG01") (unit 1))))
+	)
+	(wire (pts (xy 30.48 54.61) (xy 30.48 57.15)) (stroke (width 0) (type default)) (uuid "1a32203a-4fab-4629-9563-07ebd0b84475"))
+	(label "+5V" (at 30.48 57.15 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "2ee56b31-dca9-474d-b365-5c92ca386d63"))
+	(symbol (lib_id "power:PWR_FLAG") (at 44.45 54.61 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board no) (dnp no) (uuid "293a1ed7-dbb3-4476-9dba-03176be150e5")
+		(property "Reference" "#FLG02" (at 46.99 51.61 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "PWR_FLAG" (at 46.99 51.61 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes)))
+		(property "Footprint" "" (at 44.45 54.61 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 44.45 54.61 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "fb721e70-50fc-4e51-b788-c601f2edba42"))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "#FLG02") (unit 1))))
+	)
+	(wire (pts (xy 44.45 54.61) (xy 44.45 57.15)) (stroke (width 0) (type default)) (uuid "eda74d54-4bbc-498d-ae0c-0acf95577c94"))
+	(label "GND" (at 44.45 57.15 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "303f79aa-867c-4123-bae4-9522faea56ed"))
+	(symbol (lib_id "Local:ESP32-S3-Zero") (at 63.5 76.2 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "da739dd5-8b22-42a7-8330-ee582669c0b6")
+		(property "Reference" "U1" (at 53.34 58.42 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "ESP32-S3-Zero" (at 53.34 60.96 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Local:ESP32-S3-Zero" (at 63.5 76.2 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 63.5 76.2 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "f26dbd90-ba96-49b7-af7a-1cbc73a14a60"))
+		(pin "2" (uuid "39bda4b1-f451-437c-8b5e-d37325affed9"))
+		(pin "3" (uuid "fe9f4fda-9de4-42fb-a194-7f81289ed336"))
+		(pin "4" (uuid "fd0972df-d3ad-4fe7-86eb-92ac14b976b5"))
+		(pin "5" (uuid "07ff6493-872b-47e3-88ea-7cee96c3c73c"))
+		(pin "6" (uuid "7a7f1b1d-3dc6-46db-bf17-79d71415f6c5"))
+		(pin "7" (uuid "0848611d-d8be-4b53-8d6d-162156bd2e30"))
+		(pin "8" (uuid "d58241e0-aff9-4e1b-8733-655889ce0dd8"))
+		(pin "9" (uuid "43cff980-96b2-4d6b-aa53-1777f91fcb09"))
+		(pin "10" (uuid "54f3f45f-9bb1-4f77-9502-ab7902c3810e"))
+		(pin "11" (uuid "2d84c3f1-db61-41c5-ad74-d5c846929a90"))
+		(pin "12" (uuid "79a08583-eb49-463d-a142-3ac5be173a34"))
+		(pin "13" (uuid "6cabd595-4254-49dc-ad71-d7d6fab47a2a"))
+		(pin "14" (uuid "dc5c7b9d-339e-4c6d-ada3-de113875acb8"))
+		(pin "15" (uuid "f864410c-6e24-4dd8-9f62-ead6f82e8b72"))
+		(pin "16" (uuid "0b8d9231-c096-44b1-99b5-8d3bf8a49f3d"))
+		(pin "17" (uuid "4902258b-11d6-4da2-b7a9-be951ddef395"))
+		(pin "18" (uuid "e5bb1d34-9b36-4fc3-81ef-b93a4131b0b1"))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "U1") (unit 1))))
+	)
+	(wire (pts (xy 50.8 66.04) (xy 48.26 66.04)) (stroke (width 0) (type default)) (uuid "51f30b50-9cbb-43a8-96e4-f1d08b271c91"))
+	(label "+5V" (at 48.26 66.04 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "0c1f1a8a-754c-4c1f-b5d3-fb7e931e2a3e"))
+	(wire (pts (xy 50.8 68.58) (xy 48.26 68.58)) (stroke (width 0) (type default)) (uuid "222bf141-1ec0-4c27-bfde-92c954591931"))
+	(label "GND" (at 48.26 68.58 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "c8bb211a-7793-4dae-a717-110d9d4cb248"))
+	(wire (pts (xy 50.8 71.12) (xy 48.26 71.12)) (stroke (width 0) (type default)) (uuid "0c4c1409-d298-4eed-b562-18fdc61671e8"))
+	(label "+3V3" (at 48.26 71.12 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "f2bc9cbb-2045-4192-a3a0-62ae30c855a4"))
+	(wire (pts (xy 50.8 73.66) (xy 48.26 73.66)) (stroke (width 0) (type default)) (uuid "1a63ba11-3007-4f20-8316-cd45bd7a3be7"))
+	(label "LASER_EN" (at 48.26 73.66 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "7226faf1-4ec8-481c-aa17-3387aec72b6e"))
+	(wire (pts (xy 50.8 76.2) (xy 48.26 76.2)) (stroke (width 0) (type default)) (uuid "923eebb3-a110-4286-b435-a1212cd889a4"))
+	(label "NEO_DATA" (at 48.26 76.2 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "8e46d069-53bc-4fa4-b410-90f1687351ac"))
+	(wire (pts (xy 50.8 78.74) (xy 48.26 78.74)) (stroke (width 0) (type default)) (uuid "0d85926a-6c9d-4e1f-9609-555aac20ed69"))
+	(label "BTN_OCT" (at 48.26 78.74 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "84c87016-0de1-4c8c-adf0-9397d4653dbb"))
+	(wire (pts (xy 50.8 81.28) (xy 48.26 81.28)) (stroke (width 0) (type default)) (uuid "75c5e267-5421-4a7a-a664-f29e7000f093"))
+	(label "BTN_SCALE" (at 48.26 81.28 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "f613d531-33e9-44a9-89b0-f9878e51f213"))
+	(no_connect (at 50.8 83.82) (uuid "e3adae9e-d993-408a-a221-5b28d1d2823d"))
+	(wire (pts (xy 50.8 86.36) (xy 48.26 86.36)) (stroke (width 0) (type default)) (uuid "fb782b67-0488-4121-bd94-eb7314951801"))
+	(label "CMP8" (at 48.26 86.36 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "57082d01-570a-4bec-bf9b-a33fb67611d4"))
+	(no_connect (at 76.2 66.04) (uuid "a0e45a4c-1444-4d41-973c-b8867e36818a"))
+	(no_connect (at 76.2 68.58) (uuid "09dae4c3-98c9-4a6f-8e1e-6eda4a8aaa30"))
+	(wire (pts (xy 76.2 71.12) (xy 78.74 71.12)) (stroke (width 0) (type default)) (uuid "dba67e4b-43e4-475c-ab5c-42a10aa6807e"))
+	(label "CMP1" (at 78.74 71.12 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "229b8203-23e2-4c33-abeb-09f5d70625e3"))
+	(wire (pts (xy 76.2 73.66) (xy 78.74 73.66)) (stroke (width 0) (type default)) (uuid "bf33590c-c320-4166-9ae9-4a359839f4f4"))
+	(label "CMP2" (at 78.74 73.66 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "b838795b-fc6e-43fe-85bd-a86845536aa6"))
+	(wire (pts (xy 76.2 76.2) (xy 78.74 76.2)) (stroke (width 0) (type default)) (uuid "888d9315-5f3a-40ef-9f6d-fbb707e384c1"))
+	(label "CMP3" (at 78.74 76.2 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "8ad2de48-d648-4576-8bcc-a71ff9571e6d"))
+	(wire (pts (xy 76.2 78.74) (xy 78.74 78.74)) (stroke (width 0) (type default)) (uuid "6ab39218-ecd6-4eec-9622-4661d66af595"))
+	(label "CMP4" (at 78.74 78.74 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "5271ee8e-285e-4c97-b1f2-0e3dc0eb8b69"))
+	(wire (pts (xy 76.2 81.28) (xy 78.74 81.28)) (stroke (width 0) (type default)) (uuid "b8c5db5f-5e70-4cf5-bc18-2b301dec963f"))
+	(label "CMP5" (at 78.74 81.28 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "c5ec98ea-865a-4016-9669-b58b6424b5f4"))
+	(wire (pts (xy 76.2 83.82) (xy 78.74 83.82)) (stroke (width 0) (type default)) (uuid "907d916b-ea72-4b66-b28b-f7b545dffc8b"))
+	(label "CMP6" (at 78.74 83.82 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "56cb8d20-d456-4c68-a558-bffcdc5848f7"))
+	(wire (pts (xy 76.2 86.36) (xy 78.74 86.36)) (stroke (width 0) (type default)) (uuid "15b87983-4c9d-47fb-b6bc-21a9c4af6b4d"))
+	(label "CMP7" (at 78.74 86.36 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "0fe35c20-2acf-4605-8bcc-d6aaa69af4a2"))
+	(symbol (lib_id "Connector_Generic:Conn_01x10") (at 30.48 165.1 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "0a0a9994-a87c-4a75-84cf-de4466643b77")
+		(property "Reference" "J1" (at 30.48 151.13 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "BAR_CONN" (at 30.48 181.61 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical" (at 30.48 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 30.48 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "bfab8fe3-f582-4f01-ae29-56c9fe78f95d"))
+		(pin "2" (uuid "f04ab01c-ec1f-461a-a900-bbe186f30a68"))
+		(pin "3" (uuid "9e3a932c-75a8-4587-885e-5871f4837e15"))
+		(pin "4" (uuid "66fc1517-27f5-4b3a-a443-67bccf7bcc4a"))
+		(pin "5" (uuid "3ee8514b-38d9-4e28-8355-a6d5f7530f4a"))
+		(pin "6" (uuid "5dec3af1-896b-4a4e-a842-ccbb8a1101d1"))
+		(pin "7" (uuid "4ce12fef-3f46-4440-a12a-69ef4b04a370"))
+		(pin "8" (uuid "d26d7443-8041-4b0c-949c-16937cd37736"))
+		(pin "9" (uuid "f9587fcc-6070-4f56-8232-bf3f472af57a"))
+		(pin "10" (uuid "62d9df6b-ac50-4231-b6a4-c6f78d128984"))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "J1") (unit 1))))
+	)
+	(wire (pts (xy 25.4 154.94) (xy 22.86 154.94)) (stroke (width 0) (type default)) (uuid "52e4d99b-dd29-43cb-89d7-4501316f76d4"))
+	(label "SENS1" (at 22.86 154.94 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "2349d8d6-41a3-4069-b2e2-4f546e1ae39f"))
+	(wire (pts (xy 25.4 157.48) (xy 22.86 157.48)) (stroke (width 0) (type default)) (uuid "64a398ff-0e56-440a-92b3-970c9a4d19c6"))
+	(label "SENS2" (at 22.86 157.48 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "25ebe6e8-e82a-4723-bc9d-2b784572851d"))
+	(wire (pts (xy 25.4 160.02) (xy 22.86 160.02)) (stroke (width 0) (type default)) (uuid "e80c3764-6b5d-411e-b377-61f90f046aa0"))
+	(label "SENS3" (at 22.86 160.02 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "445839f3-ef48-4426-941d-63be62f87a7c"))
+	(wire (pts (xy 25.4 162.56) (xy 22.86 162.56)) (stroke (width 0) (type default)) (uuid "10a447e0-2bd2-47d1-b537-03185b02ca44"))
+	(label "SENS4" (at 22.86 162.56 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "577fdafc-a9e4-48be-a678-b7f46eb472a8"))
+	(wire (pts (xy 25.4 165.1) (xy 22.86 165.1)) (stroke (width 0) (type default)) (uuid "7e1d676d-8cf0-4de9-8492-488f1d36045e"))
+	(label "SENS5" (at 22.86 165.1 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "23db3f44-0322-46b5-b67a-93f981b28829"))
+	(wire (pts (xy 25.4 167.64) (xy 22.86 167.64)) (stroke (width 0) (type default)) (uuid "64809753-4e83-4e57-b5db-0ce1d81b8cce"))
+	(label "SENS6" (at 22.86 167.64 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "31ee4e09-444b-4803-9fd5-d414a0f098a5"))
+	(wire (pts (xy 25.4 170.18) (xy 22.86 170.18)) (stroke (width 0) (type default)) (uuid "1972c388-b1f3-47b2-b7bd-12c02caa64d6"))
+	(label "SENS7" (at 22.86 170.18 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "498916ed-2f38-4d84-9ada-14ab3a2ee097"))
+	(wire (pts (xy 25.4 172.72) (xy 22.86 172.72)) (stroke (width 0) (type default)) (uuid "bfb743d4-4117-45eb-a206-e8b934d81c67"))
+	(label "SENS8" (at 22.86 172.72 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "11726b78-f57a-45cf-91ea-a6ff252648a9"))
+	(wire (pts (xy 25.4 175.26) (xy 22.86 175.26)) (stroke (width 0) (type default)) (uuid "39e7cf79-4266-47e8-b156-c6e8dc6412b1"))
+	(label "+3V3" (at 22.86 175.26 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "4b59a9c4-ff69-4111-b45b-0fc4e65a8e98"))
+	(wire (pts (xy 25.4 177.8) (xy 22.86 177.8)) (stroke (width 0) (type default)) (uuid "423a2fdd-3c38-40aa-b102-2760c299c916"))
+	(label "GND" (at 22.86 177.8 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "080d79b3-af9f-4967-917f-b663701af8f6"))
+	(symbol (lib_id "Switch:SW_Push") (at 45.72 204.47 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "f857efaa-dc46-43d8-a896-1255f0e3b099")
+		(property "Reference" "SW1" (at 40.72 201.47 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "OCTAVE" (at 40.72 208.97 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Button_Switch_THT:SW_PUSH_6mm" (at 45.72 204.47 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 45.72 204.47 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "7bc1cdf9-be47-474a-b150-ee9ac495c465"))
+		(pin "2" (uuid "18046da5-af14-4e87-84d7-3e80d4895977"))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "SW1") (unit 1))))
+	)
+	(wire (pts (xy 40.64 204.47) (xy 38.1 204.47)) (stroke (width 0) (type default)) (uuid "ba899321-3f70-4287-b8e7-9756f16bb4a0"))
+	(label "BTN_OCT" (at 38.1 204.47 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "55983618-778a-4f90-ba3a-bfc8230ad33e"))
+	(wire (pts (xy 50.8 204.47) (xy 53.34 204.47)) (stroke (width 0) (type default)) (uuid "890b75c9-582c-4b57-891e-0cd29896fc0c"))
+	(label "GND" (at 53.34 204.47 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "d8244441-8dc9-4aed-88cf-81b5490955f5"))
+	(symbol (lib_id "Switch:SW_Push") (at 45.72 224.79 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "3abca74c-fb17-4f66-a19f-10b2a563f91c")
+		(property "Reference" "SW2" (at 40.72 221.79 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "SCALE" (at 40.72 229.29 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Button_Switch_THT:SW_PUSH_6mm" (at 45.72 224.79 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 45.72 224.79 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "dd3a8169-5d9c-441b-bbe7-47314555dac2"))
+		(pin "2" (uuid "23aa377a-d48c-40f3-8c97-42a7e9db1442"))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "SW2") (unit 1))))
+	)
+	(wire (pts (xy 40.64 224.79) (xy 38.1 224.79)) (stroke (width 0) (type default)) (uuid "b7eb8879-768d-4674-a775-1c3e6c9a409b"))
+	(label "BTN_SCALE" (at 38.1 224.79 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "38e09159-fab7-4b5e-a00e-26abb47fdf65"))
+	(wire (pts (xy 50.8 224.79) (xy 53.34 224.79)) (stroke (width 0) (type default)) (uuid "a5a6a9cc-d853-4207-a15c-649e51134e95"))
+	(label "GND" (at 53.34 224.79 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "4113d996-ccd6-4f4e-88c1-0e353f667e7c"))
+	(symbol (lib_id "Comparator:LM393") (at 139.7 59.69 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "e17f26be-f17f-4b3a-8698-08af6a5be181")
+		(property "Reference" "U2" (at 134.62 50.8 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "LM393" (at 134.62 53.34 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" (at 139.7 59.69 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 139.7 59.69 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "aa5e2b37-c7c6-490d-9888-b37dbac8b0ea"))
+		(pin "2" (uuid "85187ad0-2ff8-49e3-be44-bd4635668f6d"))
+		(pin "3" (uuid "31147ef1-ddb4-4c4e-be96-1eb178170fa7"))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "U2") (unit 1))))
+	)
+	(wire (pts (xy 147.32 59.69) (xy 149.86 59.69)) (stroke (width 0) (type default)) (uuid "45798c02-45df-4d89-b6e9-d8407be0ebb7"))
+	(label "CMP1" (at 149.86 59.69 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "bc971e6f-5357-48f7-aed6-a585a28c4a08"))
+	(wire (pts (xy 132.08 62.23) (xy 129.54 62.23)) (stroke (width 0) (type default)) (uuid "8ba5835b-a1ef-424f-8330-baa1f45654da"))
+	(label "VREF" (at 129.54 62.23 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "1b1f7d7b-c6b6-45f9-80ed-6a0ba1d53f2e"))
+	(wire (pts (xy 132.08 57.15) (xy 129.54 57.15)) (stroke (width 0) (type default)) (uuid "e1bc5862-1213-474e-8dd8-3d222fbe2fa0"))
+	(label "SENS1" (at 129.54 57.15 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "6dded4e6-a3b1-4d23-8c15-90bc5b5b79b9"))
+	(symbol (lib_id "Comparator:LM393") (at 139.7 85.09 0) (unit 2) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "341bab25-509d-4c8f-9073-ad78c1ec51fa")
+		(property "Reference" "U2" (at 134.62 76.2 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "LM393" (at 142.24 86.36 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes)))
+		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" (at 139.7 85.09 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 139.7 85.09 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "5" (uuid "f6d996ba-0cb9-4082-882e-d39826844f43"))
+		(pin "6" (uuid "8d2b7ec2-395a-4b17-af26-cf5befc2ae8d"))
+		(pin "7" (uuid "b982c7f6-9a7c-4b5c-acc6-0080bef3d1eb"))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "U2") (unit 2))))
+	)
+	(wire (pts (xy 132.08 82.55) (xy 129.54 82.55)) (stroke (width 0) (type default)) (uuid "2fae8b62-9df8-4173-90e5-00bc6f663d7c"))
+	(label "SENS2" (at 129.54 82.55 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "d1060a98-1f91-460c-ab3a-7cd11c8dd132"))
+	(wire (pts (xy 132.08 87.63) (xy 129.54 87.63)) (stroke (width 0) (type default)) (uuid "f2a96d79-5ebf-4b4a-a094-cac4031f08f4"))
+	(label "VREF" (at 129.54 87.63 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "5a1d2d63-81f3-407f-bac4-8d49c13afc5e"))
+	(wire (pts (xy 147.32 85.09) (xy 149.86 85.09)) (stroke (width 0) (type default)) (uuid "e7c20ef9-b014-4d3c-88a3-2ae230da3b77"))
+	(label "CMP2" (at 149.86 85.09 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "bdcba16e-e2c9-4990-b8ab-7de614bec7f9"))
+	(symbol (lib_id "Comparator:LM393") (at 170.18 72.39 0) (unit 3) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "1f29fd65-c102-4124-8968-4b8cb28d3f28")
+		(property "Reference" "U2" (at 172.72 71.12 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "LM393" (at 172.72 73.66 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes)))
+		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" (at 170.18 72.39 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 170.18 72.39 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "4" (uuid "0f5df69a-2dde-499c-bcc5-dea351d65522"))
+		(pin "8" (uuid "2615e01d-0b83-4301-9644-b1933124ac8c"))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "U2") (unit 3))))
+	)
+	(wire (pts (xy 167.64 80.01) (xy 167.64 82.55)) (stroke (width 0) (type default)) (uuid "9698c905-9973-40d8-a291-7028a4dc9b94"))
+	(label "GND" (at 167.64 82.55 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "21e47bf4-d8b7-42e4-b1b5-3f3db72926db"))
+	(wire (pts (xy 167.64 64.77) (xy 167.64 62.23)) (stroke (width 0) (type default)) (uuid "129eae81-e0a9-4962-ba27-a1bea941542e"))
+	(label "+5V" (at 167.64 62.23 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "6925a781-bd2d-4d85-9d84-ae35de507e6d"))
+	(symbol (lib_id "Comparator:LM393") (at 199.39 59.69 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "9578fe5f-746d-45d2-9ed3-f436b6ab5802")
+		(property "Reference" "U3" (at 194.31 50.8 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "LM393" (at 194.31 53.34 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" (at 199.39 59.69 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 199.39 59.69 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "533868cf-223f-4f01-85d2-ed2a990455da"))
+		(pin "2" (uuid "2a7d8ed4-15db-4d58-a821-683de9736265"))
+		(pin "3" (uuid "68d5cec6-8654-4163-9031-54894e846c05"))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "U3") (unit 1))))
+	)
+	(wire (pts (xy 207.01 59.69) (xy 209.55 59.69)) (stroke (width 0) (type default)) (uuid "ac717413-dbb8-42ae-bc41-db22f60f2547"))
+	(label "CMP3" (at 209.55 59.69 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "4dc2bd1a-1864-4df1-92ab-2166e3b32c11"))
+	(wire (pts (xy 191.77 62.23) (xy 189.23 62.23)) (stroke (width 0) (type default)) (uuid "332255c8-3d6b-41e3-b384-b6c9d23afa92"))
+	(label "VREF" (at 189.23 62.23 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "287acb0c-1a43-4104-8898-a96ecec5e73a"))
+	(wire (pts (xy 191.77 57.15) (xy 189.23 57.15)) (stroke (width 0) (type default)) (uuid "eaf9cb16-232b-4aad-ac25-23999002b05e"))
+	(label "SENS3" (at 189.23 57.15 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "7d4acc10-699d-4a89-b868-539939de7b4c"))
+	(symbol (lib_id "Comparator:LM393") (at 199.39 85.09 0) (unit 2) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "921d58e9-f899-4db1-b532-70e8870ef532")
+		(property "Reference" "U3" (at 194.31 76.2 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "LM393" (at 201.93 86.36 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes)))
+		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" (at 199.39 85.09 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 199.39 85.09 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "5" (uuid "94c808d8-4238-444c-ada8-d3573b106a4e"))
+		(pin "6" (uuid "3aed57b7-bbbc-4b18-9683-7d14fe043f8c"))
+		(pin "7" (uuid "c74c2b15-c8f0-42c9-bdf0-f37fbd34007e"))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "U3") (unit 2))))
+	)
+	(wire (pts (xy 191.77 82.55) (xy 189.23 82.55)) (stroke (width 0) (type default)) (uuid "86a993ea-666c-4d39-9450-2e4cd9921609"))
+	(label "SENS4" (at 189.23 82.55 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "d44cdad2-bca7-4c8d-a223-f7a551128890"))
+	(wire (pts (xy 191.77 87.63) (xy 189.23 87.63)) (stroke (width 0) (type default)) (uuid "136383a3-d59f-471a-b4e7-7213f5a7d7b7"))
+	(label "VREF" (at 189.23 87.63 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "b777a5b9-1ada-4533-86ec-6a973c5fd1af"))
+	(wire (pts (xy 207.01 85.09) (xy 209.55 85.09)) (stroke (width 0) (type default)) (uuid "5e366198-f856-478c-90e1-60ca12814e22"))
+	(label "CMP4" (at 209.55 85.09 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "a80913b9-7cb0-451e-ace7-fcedb53fd4d7"))
+	(symbol (lib_id "Comparator:LM393") (at 229.87 72.39 0) (unit 3) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "7c49bd3a-a0af-4059-ba70-9a5d0b07e031")
+		(property "Reference" "U3" (at 232.41 71.12 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "LM393" (at 232.41 73.66 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes)))
+		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" (at 229.87 72.39 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 229.87 72.39 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "4" (uuid "fd91346e-8849-4b03-831a-1edca1bd477d"))
+		(pin "8" (uuid "80fe5c46-339c-4348-98ca-36052ba32283"))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "U3") (unit 3))))
+	)
+	(wire (pts (xy 227.33 80.01) (xy 227.33 82.55)) (stroke (width 0) (type default)) (uuid "28e2e1a7-9e9e-4a8f-86ae-91db44318d31"))
+	(label "GND" (at 227.33 82.55 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "8c7234c0-64c3-478e-8460-c76707e50337"))
+	(wire (pts (xy 227.33 64.77) (xy 227.33 62.23)) (stroke (width 0) (type default)) (uuid "f47dfd94-d26f-4351-b419-67a3c3af8d47"))
+	(label "+5V" (at 227.33 62.23 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "9c27dcf6-9682-4c8c-bb07-1f2e4641957f"))
+	(symbol (lib_id "Comparator:LM393") (at 139.7 119.38 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "774e5e5d-907c-477b-b7b3-e8f8ffddd446")
+		(property "Reference" "U4" (at 134.62 110.49 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "LM393" (at 134.62 113.03 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" (at 139.7 119.38 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 139.7 119.38 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "8ac7be5b-b819-428a-992a-c86560e611b6"))
+		(pin "2" (uuid "c3e336c8-c280-4059-b96c-c93d708980bc"))
+		(pin "3" (uuid "50002a49-d602-4c7e-97e6-31b2003707cc"))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "U4") (unit 1))))
+	)
+	(wire (pts (xy 147.32 119.38) (xy 149.86 119.38)) (stroke (width 0) (type default)) (uuid "cf074bed-7547-405a-8da9-c006ac35c689"))
+	(label "CMP5" (at 149.86 119.38 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "525c8bbc-7571-4775-b0e9-f08e3f429a1d"))
+	(wire (pts (xy 132.08 121.92) (xy 129.54 121.92)) (stroke (width 0) (type default)) (uuid "a89ae64b-e0da-4749-bc4e-bf3912d52659"))
+	(label "VREF" (at 129.54 121.92 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "b0267932-c1a0-40fb-a583-c5be8e5332bb"))
+	(wire (pts (xy 132.08 116.84) (xy 129.54 116.84)) (stroke (width 0) (type default)) (uuid "aa79236c-9646-4220-893f-8c7a6ad0081b"))
+	(label "SENS5" (at 129.54 116.84 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "fb4c450e-948c-4004-bc07-086dd93deb0b"))
+	(symbol (lib_id "Comparator:LM393") (at 139.7 144.78 0) (unit 2) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "f2d0012c-e21c-4d5a-a1b7-10a46fe85eab")
+		(property "Reference" "U4" (at 134.62 135.89 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "LM393" (at 142.24 146.05 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes)))
+		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" (at 139.7 144.78 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 139.7 144.78 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "5" (uuid "7f171ef8-5b09-47b1-8f8d-4fbb0484ccb0"))
+		(pin "6" (uuid "6051317d-7f38-4ecd-ba19-8272b7b6daa2"))
+		(pin "7" (uuid "f486ddaa-d506-4828-9637-c92ad612240a"))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "U4") (unit 2))))
+	)
+	(wire (pts (xy 132.08 142.24) (xy 129.54 142.24)) (stroke (width 0) (type default)) (uuid "b45ec266-81b3-4f58-8c4c-74335f86ee78"))
+	(label "SENS6" (at 129.54 142.24 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "b3217d76-ea4a-45ac-9451-ad9594516b61"))
+	(wire (pts (xy 132.08 147.32) (xy 129.54 147.32)) (stroke (width 0) (type default)) (uuid "a65603b2-9bab-4fd0-a35a-9b944a3985ff"))
+	(label "VREF" (at 129.54 147.32 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "665f2a21-52b4-4499-9c47-0975f5567445"))
+	(wire (pts (xy 147.32 144.78) (xy 149.86 144.78)) (stroke (width 0) (type default)) (uuid "e5d0b0e2-bce3-462c-a7ef-0f76c2466b00"))
+	(label "CMP6" (at 149.86 144.78 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "5a2ee162-8696-4835-8c09-01210c356a97"))
+	(symbol (lib_id "Comparator:LM393") (at 170.18 132.08 0) (unit 3) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "ecc967a0-acb1-41ab-8937-1bb7a6978637")
+		(property "Reference" "U4" (at 172.72 130.81 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "LM393" (at 172.72 133.35 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes)))
+		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" (at 170.18 132.08 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 170.18 132.08 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "4" (uuid "52385b84-2128-4931-9ebe-76e89ba3c702"))
+		(pin "8" (uuid "62455254-fd96-4267-b069-b18c55ad96d9"))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "U4") (unit 3))))
+	)
+	(wire (pts (xy 167.64 139.7) (xy 167.64 142.24)) (stroke (width 0) (type default)) (uuid "23de240a-1307-4a4b-9740-51ac60c28117"))
+	(label "GND" (at 167.64 142.24 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "ae3f6b87-d9ab-47b8-a5eb-43fc479d109a"))
+	(wire (pts (xy 167.64 124.46) (xy 167.64 121.92)) (stroke (width 0) (type default)) (uuid "f2b9a6f6-4fc0-4963-a8dd-a84c29ca3bfd"))
+	(label "+5V" (at 167.64 121.92 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "8bb3fd61-adab-4935-a207-edacb23abdb3"))
+	(symbol (lib_id "Comparator:LM393") (at 199.39 119.38 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "ea68fb9f-2432-4fbc-821b-6471b9a5a67a")
+		(property "Reference" "U5" (at 194.31 110.49 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "LM393" (at 194.31 113.03 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" (at 199.39 119.38 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 199.39 119.38 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "8d4c1399-437c-4039-8b11-a88cbb87427b"))
+		(pin "2" (uuid "2cd53102-3e20-4ce1-995e-1d8e220715ca"))
+		(pin "3" (uuid "806ea694-c221-4009-bd47-93a4e7457f51"))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "U5") (unit 1))))
+	)
+	(wire (pts (xy 207.01 119.38) (xy 209.55 119.38)) (stroke (width 0) (type default)) (uuid "a7b43834-bc09-4a69-875e-b55861553083"))
+	(label "CMP7" (at 209.55 119.38 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "a5436986-fe8b-4f23-ab76-48ee55678962"))
+	(wire (pts (xy 191.77 121.92) (xy 189.23 121.92)) (stroke (width 0) (type default)) (uuid "e885e3f7-bf8e-4342-ae1f-9c82721a4da0"))
+	(label "VREF" (at 189.23 121.92 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "49a61d5c-00c3-454f-b19b-bb3e11b6ebf6"))
+	(wire (pts (xy 191.77 116.84) (xy 189.23 116.84)) (stroke (width 0) (type default)) (uuid "17371618-b488-49c8-b74d-8fa5189543bf"))
+	(label "SENS7" (at 189.23 116.84 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "0ef8f567-b0ec-42a1-8f85-298dad9e01b1"))
+	(symbol (lib_id "Comparator:LM393") (at 199.39 144.78 0) (unit 2) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "188f0857-ab7c-4434-9f25-fb9c40858b0f")
+		(property "Reference" "U5" (at 194.31 135.89 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "LM393" (at 201.93 146.05 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes)))
+		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" (at 199.39 144.78 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 199.39 144.78 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "5" (uuid "dbdd1f42-f3e7-46cd-8195-2f214e815d8f"))
+		(pin "6" (uuid "bf69a45d-f99d-441e-8102-8885121cdc93"))
+		(pin "7" (uuid "afa58fb8-f883-453e-a74a-8b478da4901f"))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "U5") (unit 2))))
+	)
+	(wire (pts (xy 191.77 142.24) (xy 189.23 142.24)) (stroke (width 0) (type default)) (uuid "bc0f2956-afd0-4242-9759-feef38fddc00"))
+	(label "SENS8" (at 189.23 142.24 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "1694b04c-93fd-458c-9d54-8f2d3ffa77cd"))
+	(wire (pts (xy 191.77 147.32) (xy 189.23 147.32)) (stroke (width 0) (type default)) (uuid "e87ac419-5e03-4210-94a1-23dd15de1f7b"))
+	(label "VREF" (at 189.23 147.32 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "ac3431db-1cc9-4de6-b701-4892d74cd6f0"))
+	(wire (pts (xy 207.01 144.78) (xy 209.55 144.78)) (stroke (width 0) (type default)) (uuid "dc49aede-2604-4591-8b81-cee6cc36bfdc"))
+	(label "CMP8" (at 209.55 144.78 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "e1f7ccf7-3cac-46f3-915b-c97c355f7f1c"))
+	(symbol (lib_id "Comparator:LM393") (at 229.87 132.08 0) (unit 3) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "fd214783-065a-44f6-af2a-24d52ea1d1de")
+		(property "Reference" "U5" (at 232.41 130.81 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "LM393" (at 232.41 133.35 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes)))
+		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" (at 229.87 132.08 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 229.87 132.08 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "4" (uuid "01175126-769c-4809-af4d-9ee46c3e1a20"))
+		(pin "8" (uuid "ccf65bae-6804-4521-b3b2-b92a80e61d0e"))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "U5") (unit 3))))
+	)
+	(wire (pts (xy 227.33 139.7) (xy 227.33 142.24)) (stroke (width 0) (type default)) (uuid "8b339fec-a6bf-436d-bde1-cb13df840ce5"))
+	(label "GND" (at 227.33 142.24 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "a7c6422b-d9a0-4cf2-940d-d952d3934ffd"))
+	(wire (pts (xy 227.33 124.46) (xy 227.33 121.92)) (stroke (width 0) (type default)) (uuid "5e9afe3e-94c9-423e-9bdd-fec851990832"))
+	(label "+5V" (at 227.33 121.92 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "fec25fa2-c69c-419f-95ef-fcc942d279ef"))
+	(symbol (lib_id "Device:R") (at 134.62 204.47 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "0ef701f0-7ecf-44ea-bb59-7fb8211e1dee")
+		(property "Reference" "R1" (at 136.12 203.2 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "10k" (at 136.12 205.74 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 134.62 204.47 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 134.62 204.47 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "fe149673-5096-4168-a40f-f9e88c07cef3"))
+		(pin "2" (uuid "629c414e-0d0d-4714-b6ac-a10763a553cb"))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "R1") (unit 1))))
+	)
+	(wire (pts (xy 134.62 200.66) (xy 134.62 198.12)) (stroke (width 0) (type default)) (uuid "999491a0-3804-40fa-a4a6-9db941f2b352"))
+	(label "+3V3" (at 134.62 198.12 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "2fcdce88-2324-429c-8501-8fbd3730309a"))
+	(wire (pts (xy 134.62 208.28) (xy 134.62 210.82)) (stroke (width 0) (type default)) (uuid "26339c95-b5c1-41ee-a89b-2d52efaf9e35"))
+	(label "CMP1" (at 134.62 210.82 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "d94d54c1-ac04-4b76-a0f2-25ee1994b13a"))
+	(symbol (lib_id "Device:R") (at 151.13 204.47 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "0bc1eeff-a249-411b-b5f6-f241fa6dd386")
+		(property "Reference" "R2" (at 152.63 203.2 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "10k" (at 152.63 205.74 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 151.13 204.47 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 151.13 204.47 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "daab0476-f944-4a76-a249-7ba2eed08817"))
+		(pin "2" (uuid "35e07444-cc22-4243-b689-cb37511a4a7d"))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "R2") (unit 1))))
+	)
+	(wire (pts (xy 151.13 200.66) (xy 151.13 198.12)) (stroke (width 0) (type default)) (uuid "6143183c-a9a6-4464-b4f0-3542d6fdbe61"))
+	(label "+3V3" (at 151.13 198.12 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "068a58db-cadb-4547-82bf-ac5c81b227ec"))
+	(wire (pts (xy 151.13 208.28) (xy 151.13 210.82)) (stroke (width 0) (type default)) (uuid "1ba17a33-4eda-4f5f-ae9e-99cf1e61ae83"))
+	(label "CMP2" (at 151.13 210.82 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "d1982fdc-50a5-41fa-9ff3-e5a8ad783f8a"))
+	(symbol (lib_id "Device:R") (at 166.37 204.47 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "1bb0a5cb-1c63-4247-8854-ba62cba8d8d0")
+		(property "Reference" "R3" (at 167.87 203.2 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "10k" (at 167.87 205.74 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 166.37 204.47 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 166.37 204.47 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "eaed3ec5-9669-4052-ad2d-2b7aeeaeb8cc"))
+		(pin "2" (uuid "ba912a62-5295-4a9f-b16f-5267040d34f5"))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "R3") (unit 1))))
+	)
+	(wire (pts (xy 166.37 200.66) (xy 166.37 198.12)) (stroke (width 0) (type default)) (uuid "cb0b4860-a781-4012-8598-1296c65bfacb"))
+	(label "+3V3" (at 166.37 198.12 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "c48a7dbc-c55d-40db-9605-b9e9bf48c35e"))
+	(wire (pts (xy 166.37 208.28) (xy 166.37 210.82)) (stroke (width 0) (type default)) (uuid "d5164e7e-61bf-455a-ab0d-afa31adc6f15"))
+	(label "CMP3" (at 166.37 210.82 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "c37647f5-6780-4b67-8fb7-8480ce1fd710"))
+	(symbol (lib_id "Device:R") (at 182.88 204.47 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "abad1a64-84ec-4c26-81b7-fd9e711efb76")
+		(property "Reference" "R4" (at 184.38 203.2 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "10k" (at 184.38 205.74 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 182.88 204.47 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 182.88 204.47 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "c72fd397-1efa-4cbe-8ca0-025858a5fa20"))
+		(pin "2" (uuid "46bc17e2-3886-4cab-aff4-0be9ac2f2ab4"))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "R4") (unit 1))))
+	)
+	(wire (pts (xy 182.88 200.66) (xy 182.88 198.12)) (stroke (width 0) (type default)) (uuid "686f7e6e-7b2a-4d55-8f18-85075be8a4d7"))
+	(label "+3V3" (at 182.88 198.12 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "8461fa5a-a295-48e5-82c5-8d70cbedfdaf"))
+	(wire (pts (xy 182.88 208.28) (xy 182.88 210.82)) (stroke (width 0) (type default)) (uuid "4d36b4e2-4e19-4357-a5a5-3d34d70cd9cb"))
+	(label "CMP4" (at 182.88 210.82 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "43722c95-b002-435d-8efa-c0fb17a83d70"))
+	(symbol (lib_id "Device:R") (at 199.39 204.47 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "de6aaac3-0db7-490c-b422-e928564ee3ea")
+		(property "Reference" "R5" (at 200.89 203.2 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "10k" (at 200.89 205.74 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 199.39 204.47 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 199.39 204.47 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "38cddcdf-f9e4-4dd2-9bf8-e1b82f500960"))
+		(pin "2" (uuid "a895d6c3-9411-467b-9dc5-97e34d60734b"))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "R5") (unit 1))))
+	)
+	(wire (pts (xy 199.39 200.66) (xy 199.39 198.12)) (stroke (width 0) (type default)) (uuid "340ab4fc-e17b-4924-849d-b3182514b4cf"))
+	(label "+3V3" (at 199.39 198.12 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "60ee53d3-573a-43d6-a93a-1013f68ae220"))
+	(wire (pts (xy 199.39 208.28) (xy 199.39 210.82)) (stroke (width 0) (type default)) (uuid "bb9d5c5f-417e-4426-b1b3-b84ca505a137"))
+	(label "CMP5" (at 199.39 210.82 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "b724afea-242e-4f54-8d50-794eb7842fb1"))
+	(symbol (lib_id "Device:R") (at 214.63 204.47 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "3a80cbb8-4b4e-4c05-ba3d-b8391d421a41")
+		(property "Reference" "R6" (at 216.13 203.2 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "10k" (at 216.13 205.74 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 214.63 204.47 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 214.63 204.47 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "d250bd06-ef5f-464a-85ca-c39460ce4e48"))
+		(pin "2" (uuid "95ed29c7-1fa1-417a-8031-ebba0e7fffcb"))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "R6") (unit 1))))
+	)
+	(wire (pts (xy 214.63 200.66) (xy 214.63 198.12)) (stroke (width 0) (type default)) (uuid "fa89927c-a01d-4626-b639-ca3836e59c7b"))
+	(label "+3V3" (at 214.63 198.12 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "7c565d81-5aad-45c8-b943-7fa2f5403a8f"))
+	(wire (pts (xy 214.63 208.28) (xy 214.63 210.82)) (stroke (width 0) (type default)) (uuid "3a385826-2833-45dd-a26b-18918e252c9e"))
+	(label "CMP6" (at 214.63 210.82 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "7c10c94e-344e-405e-a1d3-14418544a924"))
+	(symbol (lib_id "Device:R") (at 231.14 204.47 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "6627820d-d1e9-41e0-b748-b237ce9a3a3e")
+		(property "Reference" "R7" (at 232.64 203.2 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "10k" (at 232.64 205.74 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 231.14 204.47 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 231.14 204.47 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "6d7e55a0-4e06-47a4-aeee-a110d9a6736e"))
+		(pin "2" (uuid "566736da-93ae-476a-b101-740fd9fe47cf"))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "R7") (unit 1))))
+	)
+	(wire (pts (xy 231.14 200.66) (xy 231.14 198.12)) (stroke (width 0) (type default)) (uuid "6b84df16-634e-414e-9f13-ab5c28f6e9a8"))
+	(label "+3V3" (at 231.14 198.12 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "12b1fedc-bf6c-469c-bb29-03d2fea27fd6"))
+	(wire (pts (xy 231.14 208.28) (xy 231.14 210.82)) (stroke (width 0) (type default)) (uuid "cf93e849-0f9b-4850-a639-684388bf9d80"))
+	(label "CMP7" (at 231.14 210.82 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "95cf50b0-8097-43e3-8ca8-ae8333e7164d"))
+	(symbol (lib_id "Device:R") (at 246.38 204.47 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "0eab0154-64da-4ff5-95d3-40dd3b5dfb00")
+		(property "Reference" "R8" (at 247.88 203.2 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "10k" (at 247.88 205.74 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 246.38 204.47 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 246.38 204.47 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "7798a56f-9e07-440f-a819-a9838f383fbf"))
+		(pin "2" (uuid "644440ae-a91e-41a3-afc5-88e16d9b0ee0"))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "R8") (unit 1))))
+	)
+	(wire (pts (xy 246.38 200.66) (xy 246.38 198.12)) (stroke (width 0) (type default)) (uuid "477e8aeb-10d6-4d4e-a64d-bda3d27f7de2"))
+	(label "+3V3" (at 246.38 198.12 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "05bbea23-4493-4d3e-a92a-e11ef24c9633"))
+	(wire (pts (xy 246.38 208.28) (xy 246.38 210.82)) (stroke (width 0) (type default)) (uuid "2ac7cdc6-d633-42ca-91ab-15599fe5b684"))
+	(label "CMP8" (at 246.38 210.82 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "9caca4d1-9ec3-4fb1-aa7f-fea59566bf8d"))
+	(symbol (lib_id "Device:C") (at 134.62 234.95 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "ac3cfade-02ed-4123-a7c4-db7b9f39b27b")
+		(property "Reference" "C1" (at 136.12 233.68 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "100nF" (at 136.12 236.22 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 134.62 234.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 134.62 234.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "bd98bc25-9a87-4019-9db4-cd6cb20423d9"))
+		(pin "2" (uuid "6d80a462-faf5-4a2c-860c-c5f9797d0e76"))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "C1") (unit 1))))
+	)
+	(wire (pts (xy 134.62 231.14) (xy 134.62 228.6)) (stroke (width 0) (type default)) (uuid "ffa5ee18-576e-4027-98c5-b5c0450e3bd4"))
+	(label "+5V" (at 134.62 228.6 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "fa72a194-7430-4687-b7ec-8f071296e0db"))
+	(wire (pts (xy 134.62 238.76) (xy 134.62 241.3)) (stroke (width 0) (type default)) (uuid "3a462010-5d03-4607-ac41-2eef9437c46b"))
+	(label "GND" (at 134.62 241.3 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "d456e894-80c4-4448-9af8-2252e7b09db9"))
+	(symbol (lib_id "Device:C") (at 151.13 234.95 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "8844c697-9d4a-4f24-9188-506c812f811a")
+		(property "Reference" "C2" (at 152.63 233.68 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "100nF" (at 152.63 236.22 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 151.13 234.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 151.13 234.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "3a2d51c2-a70f-43fe-b135-0321510026fe"))
+		(pin "2" (uuid "d564378b-9f70-4418-80d5-8cf8e80ab6fb"))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "C2") (unit 1))))
+	)
+	(wire (pts (xy 151.13 231.14) (xy 151.13 228.6)) (stroke (width 0) (type default)) (uuid "d868048d-dde5-404c-97ae-7449c0b19d0d"))
+	(label "+5V" (at 151.13 228.6 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "88669f1a-f734-4fab-8c86-e5524c1c3c3d"))
+	(wire (pts (xy 151.13 238.76) (xy 151.13 241.3)) (stroke (width 0) (type default)) (uuid "d8c1893d-8ff3-4913-aa39-65ff412cb469"))
+	(label "GND" (at 151.13 241.3 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "c3444a54-9d81-4807-a9b2-344498c5c05c"))
+	(symbol (lib_id "Device:C") (at 166.37 234.95 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "f484e560-b307-4633-a179-e5f366f71e52")
+		(property "Reference" "C3" (at 167.87 233.68 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "100nF" (at 167.87 236.22 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 166.37 234.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 166.37 234.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "64866d12-4819-4a9c-bc8d-1a147a69b019"))
+		(pin "2" (uuid "a1b0ab3e-27e0-4bc7-9c51-9bbeeba356b0"))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "C3") (unit 1))))
+	)
+	(wire (pts (xy 166.37 231.14) (xy 166.37 228.6)) (stroke (width 0) (type default)) (uuid "1f19ad66-6e66-4695-bfe0-ff9ea14115e6"))
+	(label "+5V" (at 166.37 228.6 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "99762a2f-e6ef-4bd2-a0e1-d8a8dfc39041"))
+	(wire (pts (xy 166.37 238.76) (xy 166.37 241.3)) (stroke (width 0) (type default)) (uuid "a064668c-e1c5-4dd3-b35d-d11e12241736"))
+	(label "GND" (at 166.37 241.3 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "6f3cb272-774d-42ca-9d75-d95f63afe2cd"))
+	(symbol (lib_id "Device:C") (at 182.88 234.95 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "b69ae08b-e08a-48e4-bf8a-d477371bbefa")
+		(property "Reference" "C4" (at 184.38 233.68 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "100nF" (at 184.38 236.22 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 182.88 234.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 182.88 234.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "c0ed1572-2c4c-4b4a-83df-080962a1dc31"))
+		(pin "2" (uuid "d019f1b8-e7f1-46a5-b6a2-00d869bfcc84"))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "C4") (unit 1))))
+	)
+	(wire (pts (xy 182.88 231.14) (xy 182.88 228.6)) (stroke (width 0) (type default)) (uuid "00815e7a-4233-4046-a3a3-ef832ca2e5e4"))
+	(label "+5V" (at 182.88 228.6 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "dfdefc93-3bff-4f32-b076-1780756e811d"))
+	(wire (pts (xy 182.88 238.76) (xy 182.88 241.3)) (stroke (width 0) (type default)) (uuid "c46a6e38-96fa-4ce1-82be-ca9559be8e54"))
+	(label "GND" (at 182.88 241.3 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "cfb14d18-3763-457f-9854-edbde95840a4"))
+	(symbol (lib_id "Device:R_Potentiometer_Trim") (at 270.51 69.85 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "6700f42c-3b50-4a7f-9662-0b4dad84a643")
+		(property "Reference" "RV1" (at 262.51 68.58 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "10k" (at 262.51 71.12 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Potentiometer_THT:Potentiometer_Bourns_3296W_Vertical" (at 270.51 69.85 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 270.51 69.85 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "fd0ba12a-f0f1-446f-a7f8-0bb6550054c2"))
+		(pin "2" (uuid "4edbb75d-557f-414a-b06d-cea6aff117e0"))
+		(pin "3" (uuid "0ec389c7-ff13-432a-877a-98ce11a59e32"))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "RV1") (unit 1))))
+	)
+	(wire (pts (xy 270.51 66.04) (xy 270.51 63.5)) (stroke (width 0) (type default)) (uuid "5225f652-358c-4071-b210-ee851147a50a"))
+	(label "+3V3" (at 270.51 63.5 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "c5a63a19-0440-40b4-aac2-b32a28f76b6c"))
+	(wire (pts (xy 274.32 69.85) (xy 276.86 69.85)) (stroke (width 0) (type default)) (uuid "ad549dad-d52f-4be8-ad67-1fb14b9465d9"))
+	(label "VREF" (at 276.86 69.85 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "1af97afd-0998-4d02-9797-84611abab2c8"))
+	(wire (pts (xy 270.51 73.66) (xy 270.51 76.2)) (stroke (width 0) (type default)) (uuid "5dfaf02a-460e-47a7-943c-031af8f6741e"))
+	(label "GND" (at 270.51 76.2 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "831c5114-df15-48ca-bcf9-6593a0267d24"))
+	(symbol (lib_id "Device:C") (at 270.51 100.33 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "1b483c6d-7d3e-4bfc-91a3-9789521a4e0c")
+		(property "Reference" "C5" (at 272.01 99.06 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "100nF" (at 272.01 101.6 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 270.51 100.33 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 270.51 100.33 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "fdb19a22-bcee-4b2c-a1ec-c0fc05636d16"))
+		(pin "2" (uuid "222bfc5a-4207-435c-9954-8179b2360d70"))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "C5") (unit 1))))
+	)
+	(wire (pts (xy 270.51 96.52) (xy 270.51 93.98)) (stroke (width 0) (type default)) (uuid "eef8eb2e-5d09-4e92-bd26-3678cb1cf0d8"))
+	(label "VREF" (at 270.51 93.98 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "5da8e53f-406c-44f7-ac6b-06ec4737543f"))
+	(wire (pts (xy 270.51 104.14) (xy 270.51 106.68)) (stroke (width 0) (type default)) (uuid "44ef888a-3a28-4b26-96ec-ab2a17a92ccb"))
+	(label "GND" (at 270.51 106.68 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "9b958a3a-40de-4fa7-86d9-5ef6e9c7ba00"))
+	(symbol (lib_id "Device:R") (at 309.88 59.69 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "bddc2c18-4918-4008-8f6c-e2c11466209f")
+		(property "Reference" "R10" (at 311.38 58.42 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "100R" (at 311.38 60.96 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 309.88 59.69 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 309.88 59.69 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "4aab09ee-72f8-4698-bf52-ae78a9dc01c5"))
+		(pin "2" (uuid "c40a5ad5-099c-4056-9e66-d376c08775dd"))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "R10") (unit 1))))
+	)
+	(wire (pts (xy 309.88 55.88) (xy 309.88 53.34)) (stroke (width 0) (type default)) (uuid "067d04e7-f19f-47dd-95f6-489b27005181"))
+	(label "LASER_EN" (at 309.88 53.34 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "ce05fc47-b61d-4040-a156-bbd05d39b506"))
+	(wire (pts (xy 309.88 63.5) (xy 309.88 66.04)) (stroke (width 0) (type default)) (uuid "36ce7d89-7b0f-42e7-b55f-8281854025ff"))
+	(label "LASER_GATE" (at 309.88 66.04 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "5a1d7bbe-7492-4a18-8781-5faf162a7fb6"))
+	(symbol (lib_id "Device:R") (at 325.12 59.69 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "0e4c1de0-d6bb-4bb9-b09f-58aeba077930")
+		(property "Reference" "R11" (at 326.62 58.42 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "100k" (at 326.62 60.96 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 325.12 59.69 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 325.12 59.69 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "cb9ed6af-88b7-4d83-b0bb-3e0734911952"))
+		(pin "2" (uuid "e71d718f-e510-4277-b7b3-dbffab2d2735"))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "R11") (unit 1))))
+	)
+	(wire (pts (xy 325.12 55.88) (xy 325.12 53.34)) (stroke (width 0) (type default)) (uuid "2c502ebd-e8a9-460c-a149-120a3153f42b"))
+	(label "LASER_GATE" (at 325.12 53.34 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "da98d9dc-63a6-447c-b00a-e296d7d7e32e"))
+	(wire (pts (xy 325.12 63.5) (xy 325.12 66.04)) (stroke (width 0) (type default)) (uuid "0fed6857-a2ba-408c-a5e4-92fcb1134e54"))
+	(label "GND" (at 325.12 66.04 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "bfa6de7c-0343-46de-96a0-d46df574c78e"))
+	(symbol (lib_id "Transistor_FET:AO3400A") (at 351.79 69.85 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "fdc08ff3-8132-498d-beea-7b852aa31a0c")
+		(property "Reference" "Q1" (at 356.79 66.85 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "AO3400A" (at 356.79 69.85 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23" (at 351.79 69.85 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 351.79 69.85 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "b9b5a757-e363-4d37-8198-4f47891e53c3"))
+		(pin "2" (uuid "c81690bc-4700-4c8e-b836-2ffad141a9a1"))
+		(pin "3" (uuid "05754710-1532-44b0-accc-108600913d9d"))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "Q1") (unit 1))))
+	)
+	(wire (pts (xy 346.71 69.85) (xy 344.17 69.85)) (stroke (width 0) (type default)) (uuid "6b6ae997-a353-4298-af1f-cb67878903e3"))
+	(label "LASER_GATE" (at 344.17 69.85 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "f558ffd9-48f2-4895-bcf7-6f5b281effde"))
+	(wire (pts (xy 354.33 74.93) (xy 354.33 77.47)) (stroke (width 0) (type default)) (uuid "40db7582-b443-4c98-adab-ad18df163d5b"))
+	(label "GND" (at 354.33 77.47 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "b1e9b90e-19aa-40d0-b24f-463147524066"))
+	(wire (pts (xy 354.33 64.77) (xy 354.33 62.23)) (stroke (width 0) (type default)) (uuid "c5bea813-1788-4e87-9f1b-5070bcbf44a9"))
+	(label "LASER_GND" (at 354.33 62.23 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "86cc9510-7db8-482a-82ff-9444836a0272"))
+	(symbol (lib_id "Connector_Generic:Conn_01x02") (at 392.43 39.37 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "766a6435-33c4-4eab-8689-cc95ce6dfacd")
+		(property "Reference" "J2" (at 394.43 38.1 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "LASER1" (at 394.43 40.64 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" (at 392.43 39.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 392.43 39.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "a3e5f996-c1e0-4691-bfdd-87b0be0e5d31"))
+		(pin "2" (uuid "b0d77e6c-bbde-4b61-8af3-c6d4d057dcea"))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "J2") (unit 1))))
+	)
+	(wire (pts (xy 387.35 39.37) (xy 384.81 39.37)) (stroke (width 0) (type default)) (uuid "8896b48f-8057-439e-903a-e11a509c8e8a"))
+	(label "+5V" (at 384.81 39.37 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "a2490220-fc4e-44ad-a1f8-f39cc4f2b7bb"))
+	(wire (pts (xy 387.35 41.91) (xy 384.81 41.91)) (stroke (width 0) (type default)) (uuid "59e82b90-25e6-4be0-a518-0c00982f2edb"))
+	(label "LASER_GND" (at 384.81 41.91 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "7cf9031c-48da-4e92-bed7-92e012c8f6d2"))
+	(symbol (lib_id "Connector_Generic:Conn_01x02") (at 392.43 52.07 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "d69f3a9f-4a14-48f3-a10b-c569ea45b124")
+		(property "Reference" "J3" (at 394.43 50.8 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "LASER2" (at 394.43 53.34 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" (at 392.43 52.07 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 392.43 52.07 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "3db3b05c-82d9-4622-86ac-fcfedc5ba6f2"))
+		(pin "2" (uuid "61602eae-db03-4f4f-bb60-73f4b8ee1888"))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "J3") (unit 1))))
+	)
+	(wire (pts (xy 387.35 52.07) (xy 384.81 52.07)) (stroke (width 0) (type default)) (uuid "5eb1b70a-370f-4643-832d-a98d0e94b535"))
+	(label "+5V" (at 384.81 52.07 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "f820fe16-4181-4f9c-9cd8-a0133330954e"))
+	(wire (pts (xy 387.35 54.61) (xy 384.81 54.61)) (stroke (width 0) (type default)) (uuid "ad125308-0753-496b-8d78-3090c10e81a9"))
+	(label "LASER_GND" (at 384.81 54.61 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "ab98d786-07b0-44d0-8769-b48e2774f333"))
+	(symbol (lib_id "Connector_Generic:Conn_01x02") (at 392.43 64.77 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "84f7a8a4-8fc4-428d-8f29-b01a151ec833")
+		(property "Reference" "J4" (at 394.43 63.5 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "LASER3" (at 394.43 66.04 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" (at 392.43 64.77 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 392.43 64.77 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "b6057cdf-5718-40fe-86b5-1837d9e9b7c7"))
+		(pin "2" (uuid "5dba890a-2858-425f-a3d1-fef71f3385f8"))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "J4") (unit 1))))
+	)
+	(wire (pts (xy 387.35 64.77) (xy 384.81 64.77)) (stroke (width 0) (type default)) (uuid "d55ce35e-e800-451a-bb2e-12317e08c114"))
+	(label "+5V" (at 384.81 64.77 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "afad28ac-dd76-40f7-9997-c1b97281f5cd"))
+	(wire (pts (xy 387.35 67.31) (xy 384.81 67.31)) (stroke (width 0) (type default)) (uuid "f803543f-d827-4dd7-85cc-1869c41fd404"))
+	(label "LASER_GND" (at 384.81 67.31 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "201a86ba-0063-41a6-a01b-b4d798ed44ad"))
+	(symbol (lib_id "Connector_Generic:Conn_01x02") (at 392.43 77.47 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "17cad0fd-be8b-4e4f-b286-1c4286928ccb")
+		(property "Reference" "J5" (at 394.43 76.2 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "LASER4" (at 394.43 78.74 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" (at 392.43 77.47 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 392.43 77.47 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "29d5c15c-4f82-4b15-9dcd-8401f4e1f803"))
+		(pin "2" (uuid "4408181c-a9b3-4096-8a4c-22f956afcfff"))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "J5") (unit 1))))
+	)
+	(wire (pts (xy 387.35 77.47) (xy 384.81 77.47)) (stroke (width 0) (type default)) (uuid "5006ca34-25c2-4bbc-a140-5dda4eba26b8"))
+	(label "+5V" (at 384.81 77.47 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "2ce14fde-b699-4d52-9277-fc4c2d17f2c1"))
+	(wire (pts (xy 387.35 80.01) (xy 384.81 80.01)) (stroke (width 0) (type default)) (uuid "5ffd0f58-1026-4887-aae4-c64e3c79feb6"))
+	(label "LASER_GND" (at 384.81 80.01 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "a7897501-b025-4739-87a5-b37db49b1570"))
+	(symbol (lib_id "Connector_Generic:Conn_01x02") (at 392.43 90.17 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "3af884eb-5b89-446d-b9d0-7f1da340f5b0")
+		(property "Reference" "J6" (at 394.43 88.9 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "LASER5" (at 394.43 91.44 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" (at 392.43 90.17 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 392.43 90.17 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "d144756b-0948-40ca-8b34-d4e224a9f31f"))
+		(pin "2" (uuid "122072de-b841-4482-9eb5-c48f9466952b"))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "J6") (unit 1))))
+	)
+	(wire (pts (xy 387.35 90.17) (xy 384.81 90.17)) (stroke (width 0) (type default)) (uuid "45a0d3c8-16da-4691-a139-384a5a4e4c98"))
+	(label "+5V" (at 384.81 90.17 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "59bcdaab-3e07-4aa4-82cf-9eb4ea89c474"))
+	(wire (pts (xy 387.35 92.71) (xy 384.81 92.71)) (stroke (width 0) (type default)) (uuid "817a681e-ba52-440a-a047-4a529d79c624"))
+	(label "LASER_GND" (at 384.81 92.71 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "feb2c7df-20ca-453e-9cbb-d242aa50dc63"))
+	(symbol (lib_id "Connector_Generic:Conn_01x02") (at 392.43 102.87 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "efa078f2-eace-4603-b032-3a6d6df9d9a7")
+		(property "Reference" "J7" (at 394.43 101.6 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "LASER6" (at 394.43 104.14 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" (at 392.43 102.87 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 392.43 102.87 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "15d40ad1-09bd-4143-93b0-e39cac8b715e"))
+		(pin "2" (uuid "9d72802a-d6dc-422f-a4ce-7634cb57529d"))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "J7") (unit 1))))
+	)
+	(wire (pts (xy 387.35 102.87) (xy 384.81 102.87)) (stroke (width 0) (type default)) (uuid "f76350e6-1b01-4120-9c68-6ab1f6a3b47d"))
+	(label "+5V" (at 384.81 102.87 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "76e5b9e6-8840-4522-bc6a-95d929223b9f"))
+	(wire (pts (xy 387.35 105.41) (xy 384.81 105.41)) (stroke (width 0) (type default)) (uuid "4bb53686-c88a-4953-a866-4a32987cbbc3"))
+	(label "LASER_GND" (at 384.81 105.41 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "3578e863-549d-490f-9831-c287bbec8449"))
+	(symbol (lib_id "Connector_Generic:Conn_01x02") (at 392.43 115.57 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "3bd20a63-b4c0-49ec-a4da-a779e314dccd")
+		(property "Reference" "J8" (at 394.43 114.3 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "LASER7" (at 394.43 116.84 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" (at 392.43 115.57 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 392.43 115.57 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "ad3b1fc4-221d-44dc-90b3-517983914d0f"))
+		(pin "2" (uuid "2dc86c82-6843-494b-9758-4047bc1d6435"))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "J8") (unit 1))))
+	)
+	(wire (pts (xy 387.35 115.57) (xy 384.81 115.57)) (stroke (width 0) (type default)) (uuid "0aa71067-e393-43b9-b8e0-16a025f6f939"))
+	(label "+5V" (at 384.81 115.57 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "b4dcc98e-b30f-4737-bccb-bed24c059e76"))
+	(wire (pts (xy 387.35 118.11) (xy 384.81 118.11)) (stroke (width 0) (type default)) (uuid "ba327235-0263-4279-8170-c86cfdfb4f51"))
+	(label "LASER_GND" (at 384.81 118.11 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "682d9159-b643-4f3e-ae31-8d27b66ed2a0"))
+	(symbol (lib_id "Connector_Generic:Conn_01x02") (at 392.43 128.27 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "7e6e113c-ce73-4b30-9dc3-585652820da6")
+		(property "Reference" "J9" (at 394.43 127 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "LASER8" (at 394.43 129.54 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" (at 392.43 128.27 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 392.43 128.27 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "6f7f5c42-4f4b-4d8b-861b-65bce9e707d9"))
+		(pin "2" (uuid "e78efc33-87e7-404c-bf87-853988b71e34"))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "J9") (unit 1))))
+	)
+	(wire (pts (xy 387.35 128.27) (xy 384.81 128.27)) (stroke (width 0) (type default)) (uuid "d63022a0-2309-470b-b479-670d427f6268"))
+	(label "+5V" (at 384.81 128.27 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "54d8917b-59cd-4e22-af5e-8bf05fd17dc6"))
+	(wire (pts (xy 387.35 130.81) (xy 384.81 130.81)) (stroke (width 0) (type default)) (uuid "adaee8ae-a2eb-4dc1-bdea-308b5a3b458a"))
+	(label "LASER_GND" (at 384.81 130.81 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "2b5c51dc-dbe6-4ea2-9bc0-f59dd2f3a409"))
+	(symbol (lib_id "Device:C_Polarized") (at 304.8 105.41 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "0665920f-2403-4e62-8170-13d4b97e7a5e")
+		(property "Reference" "C6" (at 306.3 104.14 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "100uF" (at 306.3 106.68 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Capacitor_SMD:CP_Elec_6.3x5.4" (at 304.8 105.41 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 304.8 105.41 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "a9f90e68-c22c-47e4-802a-3a238d3b6ade"))
+		(pin "2" (uuid "c52b45ca-57e0-4400-8a62-30036f4be9c1"))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "C6") (unit 1))))
+	)
+	(wire (pts (xy 304.8 101.6) (xy 304.8 99.06)) (stroke (width 0) (type default)) (uuid "e871faf4-e94f-4877-b54e-0be9aa24cc22"))
+	(label "+5V" (at 304.8 99.06 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "0263c1d3-5e4f-47e3-828a-a607590a1ca2"))
+	(wire (pts (xy 304.8 109.22) (xy 304.8 111.76)) (stroke (width 0) (type default)) (uuid "33fd2fd0-544e-4675-98d3-3a8ba07e137b"))
+	(label "GND" (at 304.8 111.76 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "bada6622-490b-4ba9-8e33-1d8e6fd06d14"))
+	(symbol (lib_id "74xGxx:74AHCT1G125") (at 330.2 149.86 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "843fe332-d86a-455a-b467-a3f962d75c48")
+		(property "Reference" "U6" (at 325.2 135.86 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "74AHCT1G125" (at 325.2 137.86 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5" (at 330.2 149.86 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 330.2 149.86 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "43a92c83-8dd8-45dd-b193-6e5b6ac8b0f5"))
+		(pin "2" (uuid "59f60cec-5b0f-4fd4-ab6c-974f2d929c7e"))
+		(pin "3" (uuid "f15c8111-0fc8-49bc-83d1-e502cf93223e"))
+		(pin "4" (uuid "6555c96a-6ec2-4488-96ab-e06441c06507"))
+		(pin "5" (uuid "eb5ab4df-2065-4f69-a681-08744bc36e59"))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "U6") (unit 1))))
+	)
+	(wire (pts (xy 330.2 139.7) (xy 330.2 137.16)) (stroke (width 0) (type default)) (uuid "47266e0b-9e23-43dd-bca2-a855af9ca60c"))
+	(label "GND" (at 330.2 137.16 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "323bcba0-6d3b-49a7-bba0-968b2d60002f"))
+	(wire (pts (xy 314.96 149.86) (xy 312.42 149.86)) (stroke (width 0) (type default)) (uuid "6a812643-6559-454e-a57f-8f6ae085cca8"))
+	(label "NEO_DATA" (at 312.42 149.86 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "7b6f39e0-3356-41c3-8e44-8fd38c66f779"))
+	(wire (pts (xy 325.12 160.02) (xy 325.12 162.56)) (stroke (width 0) (type default)) (uuid "6dbaa549-a149-40de-a7f3-d948e461ea9b"))
+	(label "GND" (at 325.12 162.56 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "3dfbe0da-018f-4f17-9522-f6fd5468e665"))
+	(wire (pts (xy 342.9 149.86) (xy 345.44 149.86)) (stroke (width 0) (type default)) (uuid "3b9c5097-d438-4dae-8212-5b2d0e625caa"))
+	(label "NEO_OUT" (at 345.44 149.86 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "500bc2e2-7305-4c12-8fb4-57d2ce5a1141"))
+	(wire (pts (xy 325.12 139.7) (xy 325.12 137.16)) (stroke (width 0) (type default)) (uuid "ce82fdac-fb53-4eac-8517-edd9bf5c976a"))
+	(label "+5V" (at 325.12 137.16 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "9804defa-a97a-41ff-b3fc-a00839918d4d"))
+	(symbol (lib_id "Device:C") (at 351.79 149.86 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "e294e63c-14df-4cac-8081-0a54015105f1")
+		(property "Reference" "C15" (at 353.29 148.59 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "100nF" (at 353.29 151.13 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 351.79 149.86 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 351.79 149.86 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "9780c5a9-fd2f-408e-b9a2-5b6aaa43cac1"))
+		(pin "2" (uuid "712c88b7-2fce-4bfb-9feb-c8cc8d775926"))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "C15") (unit 1))))
+	)
+	(wire (pts (xy 351.79 146.05) (xy 351.79 143.51)) (stroke (width 0) (type default)) (uuid "d763c481-f1da-4a28-be78-302bd8064520"))
+	(label "+5V" (at 351.79 143.51 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "63ecfc67-9389-429b-8896-8ced4dcc7005"))
+	(wire (pts (xy 351.79 153.67) (xy 351.79 156.21)) (stroke (width 0) (type default)) (uuid "9633b945-7a72-4312-901d-9db13f11facf"))
+	(label "GND" (at 351.79 156.21 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "5fb7b710-5c35-49a5-849b-58f966ca899b"))
+	(symbol (lib_id "Device:R") (at 372.11 149.86 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "e2c4f2dc-f838-4ccd-b29b-d3d468f269c9")
+		(property "Reference" "R12" (at 373.61 148.59 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "330R" (at 373.61 151.13 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 372.11 149.86 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 372.11 149.86 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "3311f97e-138f-4fb6-9292-5cc951d7f5e9"))
+		(pin "2" (uuid "04638759-bcf0-49dc-94f0-e3f842646024"))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "R12") (unit 1))))
+	)
+	(wire (pts (xy 372.11 146.05) (xy 372.11 143.51)) (stroke (width 0) (type default)) (uuid "69d7b8c7-2f9e-4dd5-b125-8f5ec58f77f9"))
+	(label "NEO_OUT" (at 372.11 143.51 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "93d4b8f4-3b9e-403e-9bd1-bec1ebeee931"))
+	(wire (pts (xy 372.11 153.67) (xy 372.11 156.21)) (stroke (width 0) (type default)) (uuid "aa8350fb-74b2-4b5e-aa6a-8498720a43b8"))
+	(label "NEO0" (at 372.11 156.21 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "92a9a6b4-3cdb-4dc7-8fbb-16d9eddd310a"))
+	(symbol (lib_id "LED:SK6812MINI") (at 304.8 185.42 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "4b1a7841-8e40-4d75-a6ed-ee0e7ad60eff")
+		(property "Reference" "D1" (at 299.8 173.42 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "SK6812MINI" (at 299.8 175.92 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "LED_SMD:LED_SK6812MINI_PLCC4_3.5x3.5mm_P1.75mm" (at 304.8 185.42 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 304.8 185.42 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "60ed7a7a-ec49-46ca-a10e-ae2515813b12"))
+		(pin "2" (uuid "998099a5-56f8-4c04-9207-14657a501ca7"))
+		(pin "3" (uuid "04e83032-a21a-49f0-b189-bbc8e0ac79ee"))
+		(pin "4" (uuid "6a769c4a-7f58-419d-9068-2865f6f1b254"))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "D1") (unit 1))))
+	)
+	(wire (pts (xy 304.8 193.04) (xy 304.8 195.58)) (stroke (width 0) (type default)) (uuid "53ed64f4-6d7c-434d-a1c4-cfc82cdffb24"))
+	(label "GND" (at 304.8 195.58 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "12d20987-9fcb-4543-933e-7ec8fbbb4f68"))
+	(wire (pts (xy 297.18 185.42) (xy 294.64 185.42)) (stroke (width 0) (type default)) (uuid "654bfc1f-393e-4315-87b0-f6f34935e2a2"))
+	(label "NEO0" (at 294.64 185.42 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "f2dd1954-ae16-487e-84cd-a70672f4f879"))
+	(wire (pts (xy 304.8 177.8) (xy 304.8 175.26)) (stroke (width 0) (type default)) (uuid "4e92c2c5-898e-4ee2-bf65-7abef7e3e4db"))
+	(label "+5V" (at 304.8 175.26 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "12510726-344c-4644-8086-91f47715de8b"))
+	(wire (pts (xy 312.42 185.42) (xy 320.04 185.42)) (stroke (width 0) (type default)) (uuid "47143e63-4afc-41d4-81af-9b9f5b0aaf38"))
+	(symbol (lib_id "LED:SK6812MINI") (at 327.66 185.42 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "38a9aac6-f15a-4300-a022-1f9d03d4359c")
+		(property "Reference" "D2" (at 322.66 173.42 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "SK6812MINI" (at 322.66 175.92 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "LED_SMD:LED_SK6812MINI_PLCC4_3.5x3.5mm_P1.75mm" (at 327.66 185.42 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 327.66 185.42 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "9c9972f3-d625-4a44-9fcc-4f5ddc591c02"))
+		(pin "2" (uuid "ecf67cab-58df-4aab-a1d8-05f890854b5e"))
+		(pin "3" (uuid "2054523e-8228-4df0-bb79-d10a2b5cf293"))
+		(pin "4" (uuid "abcbc134-19bf-402f-8a79-9a34a665c83a"))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "D2") (unit 1))))
+	)
+	(wire (pts (xy 327.66 193.04) (xy 327.66 195.58)) (stroke (width 0) (type default)) (uuid "70d98cab-fa65-427c-983e-0049e0a63165"))
+	(label "GND" (at 327.66 195.58 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "a125630d-1a39-426e-8e6d-bf064dbd966d"))
+	(wire (pts (xy 327.66 177.8) (xy 327.66 175.26)) (stroke (width 0) (type default)) (uuid "c5221a85-e08a-4416-bfb4-cc0a4c7a9a66"))
+	(label "+5V" (at 327.66 175.26 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "45903ac5-7d1e-4e52-a61d-4f47d35beaa4"))
+	(wire (pts (xy 335.28 185.42) (xy 342.9 185.42)) (stroke (width 0) (type default)) (uuid "51f30d7c-ba12-46fd-aa3e-703c93873f21"))
+	(symbol (lib_id "LED:SK6812MINI") (at 350.52 185.42 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "c1166657-4c6b-45c7-8e43-63325a8d94cc")
+		(property "Reference" "D3" (at 345.52 173.42 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "SK6812MINI" (at 345.52 175.92 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "LED_SMD:LED_SK6812MINI_PLCC4_3.5x3.5mm_P1.75mm" (at 350.52 185.42 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 350.52 185.42 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "7bafcca7-f4f5-4117-acbf-0d62ac63d924"))
+		(pin "2" (uuid "ee440141-d7c6-4493-ba7a-653a452157cc"))
+		(pin "3" (uuid "cfd90ae7-2b49-4790-b7e8-4a6164c6251e"))
+		(pin "4" (uuid "effbf0a9-775a-4aa1-a4de-bee970fce36d"))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "D3") (unit 1))))
+	)
+	(wire (pts (xy 350.52 193.04) (xy 350.52 195.58)) (stroke (width 0) (type default)) (uuid "7e120c0c-35a7-4c4f-bb81-ad287ba1d7fb"))
+	(label "GND" (at 350.52 195.58 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "bf9066c2-5db6-43a5-a3a5-d3562dc116a4"))
+	(wire (pts (xy 350.52 177.8) (xy 350.52 175.26)) (stroke (width 0) (type default)) (uuid "67c8fee6-ebdc-4a86-bd21-ac5e377ab684"))
+	(label "+5V" (at 350.52 175.26 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "a1966ed6-5d2f-4b7c-a755-df078126f3a1"))
+	(wire (pts (xy 358.14 185.42) (xy 365.76 185.42)) (stroke (width 0) (type default)) (uuid "16a49693-4a42-4507-bf19-4740dd0b0830"))
+	(symbol (lib_id "LED:SK6812MINI") (at 373.38 185.42 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "8e59e419-bb50-464f-a006-d874ab04207a")
+		(property "Reference" "D4" (at 368.38 173.42 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "SK6812MINI" (at 368.38 175.92 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "LED_SMD:LED_SK6812MINI_PLCC4_3.5x3.5mm_P1.75mm" (at 373.38 185.42 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 373.38 185.42 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "8322d714-2959-4637-98df-ea3411b82657"))
+		(pin "2" (uuid "de430ead-df13-483d-b314-248dac5ffb09"))
+		(pin "3" (uuid "a2ebd467-1e7d-48bc-a4e8-59ca031e7e79"))
+		(pin "4" (uuid "88dd965d-c03f-4cc2-9857-00f026140ccb"))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "D4") (unit 1))))
+	)
+	(wire (pts (xy 381 185.42) (xy 383.54 185.42)) (stroke (width 0) (type default)) (uuid "1a01fc48-330f-4d91-8bcf-3d1f8bc3dd82"))
+	(label "NEO4" (at 383.54 185.42 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "94c3b4f3-2863-4daf-83a3-ae497249835d"))
+	(wire (pts (xy 373.38 193.04) (xy 373.38 195.58)) (stroke (width 0) (type default)) (uuid "80bbd43b-1772-45df-97ee-e18b9155dc64"))
+	(label "GND" (at 373.38 195.58 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "bf8e5bb3-d7ec-45b7-9372-207128010cb3"))
+	(wire (pts (xy 373.38 177.8) (xy 373.38 175.26)) (stroke (width 0) (type default)) (uuid "f5711921-1aee-434b-b94f-74ccdf706e90"))
+	(label "+5V" (at 373.38 175.26 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "fadce373-c961-459f-b04a-59a94cd5de88"))
+	(symbol (lib_id "LED:SK6812MINI") (at 304.8 224.79 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "17fd5561-65f3-4f57-b7d1-44832f314540")
+		(property "Reference" "D5" (at 299.8 212.79 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "SK6812MINI" (at 299.8 215.29 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "LED_SMD:LED_SK6812MINI_PLCC4_3.5x3.5mm_P1.75mm" (at 304.8 224.79 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 304.8 224.79 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "eec5f8bf-54f7-4a39-822f-97dd2b167c3d"))
+		(pin "2" (uuid "80413a1f-a30f-40bc-8a2e-2cc72e2a3420"))
+		(pin "3" (uuid "b908d723-7580-46f0-8d91-d0941192d22c"))
+		(pin "4" (uuid "2a6e3e71-3b67-4654-bc35-b434eca37e6b"))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "D5") (unit 1))))
+	)
+	(wire (pts (xy 304.8 232.41) (xy 304.8 234.95)) (stroke (width 0) (type default)) (uuid "4c6de6e1-497e-4a81-9265-5dfe49164c03"))
+	(label "GND" (at 304.8 234.95 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "ba846c63-4226-403e-93fd-e05be4cf70d5"))
+	(wire (pts (xy 297.18 224.79) (xy 294.64 224.79)) (stroke (width 0) (type default)) (uuid "c43f3b80-0ba6-4205-bc59-06779d704a6b"))
+	(label "NEO4" (at 294.64 224.79 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "dbb4dd97-a12c-4e26-b2bd-04e8f748d120"))
+	(wire (pts (xy 304.8 217.17) (xy 304.8 214.63)) (stroke (width 0) (type default)) (uuid "ea91ca21-3d4f-4ff4-b916-dc9505f174f8"))
+	(label "+5V" (at 304.8 214.63 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "75013cad-4a36-47e2-bd69-6c4ff47195c6"))
+	(wire (pts (xy 312.42 224.79) (xy 320.04 224.79)) (stroke (width 0) (type default)) (uuid "ff1fb1b6-705f-45a1-b8d9-6a78edbe4dc8"))
+	(symbol (lib_id "LED:SK6812MINI") (at 327.66 224.79 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "ea9f3d61-21e5-4815-bff3-af536a8fad82")
+		(property "Reference" "D6" (at 322.66 212.79 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "SK6812MINI" (at 322.66 215.29 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "LED_SMD:LED_SK6812MINI_PLCC4_3.5x3.5mm_P1.75mm" (at 327.66 224.79 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 327.66 224.79 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "d037d3fd-eb28-4ee2-99e0-95f9b5faae76"))
+		(pin "2" (uuid "5d68c739-b1f5-4cdb-87ca-c5889d7124ea"))
+		(pin "3" (uuid "169466af-388a-409e-82be-7cc615e32a76"))
+		(pin "4" (uuid "541e1566-2f1d-41e1-a6c7-1165bc8e2ed7"))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "D6") (unit 1))))
+	)
+	(wire (pts (xy 327.66 232.41) (xy 327.66 234.95)) (stroke (width 0) (type default)) (uuid "14a22617-d433-45ee-a32d-51bb86e903e9"))
+	(label "GND" (at 327.66 234.95 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "e1b1cc8c-e227-4a14-964d-b05e34fc8e7f"))
+	(wire (pts (xy 327.66 217.17) (xy 327.66 214.63)) (stroke (width 0) (type default)) (uuid "67a94f29-319c-419f-8a17-35355d5c9270"))
+	(label "+5V" (at 327.66 214.63 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "89289370-cedf-4823-b3f1-1298e7d7ede2"))
+	(wire (pts (xy 335.28 224.79) (xy 342.9 224.79)) (stroke (width 0) (type default)) (uuid "801a58c6-cf61-4467-a2fe-8f34edbf37df"))
+	(symbol (lib_id "LED:SK6812MINI") (at 350.52 224.79 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "1ab9a9ae-d918-4136-b970-328e9b8a4884")
+		(property "Reference" "D7" (at 345.52 212.79 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "SK6812MINI" (at 345.52 215.29 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "LED_SMD:LED_SK6812MINI_PLCC4_3.5x3.5mm_P1.75mm" (at 350.52 224.79 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 350.52 224.79 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "c25d16e3-16c1-466c-95d3-3215d1f03994"))
+		(pin "2" (uuid "26e2a263-1eb1-4ab2-8a96-f344e85359f9"))
+		(pin "3" (uuid "1db9c660-2649-4c47-bea6-2a5319cd9ede"))
+		(pin "4" (uuid "6a071635-3622-4c45-9cb0-745dd9f04125"))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "D7") (unit 1))))
+	)
+	(wire (pts (xy 350.52 232.41) (xy 350.52 234.95)) (stroke (width 0) (type default)) (uuid "8dc7b31a-fc80-4f24-9518-87eb03e0e4ae"))
+	(label "GND" (at 350.52 234.95 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "7a78e758-86a5-4d1c-bc10-71dcf0c124ee"))
+	(wire (pts (xy 350.52 217.17) (xy 350.52 214.63)) (stroke (width 0) (type default)) (uuid "0ad8a718-9a50-4170-9896-4ccb49f4b974"))
+	(label "+5V" (at 350.52 214.63 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "bb65be16-7cec-49f8-a577-ae4078d5e819"))
+	(wire (pts (xy 358.14 224.79) (xy 365.76 224.79)) (stroke (width 0) (type default)) (uuid "749de003-c739-4913-ae64-244a9cacdefd"))
+	(symbol (lib_id "LED:SK6812MINI") (at 373.38 224.79 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "64ecc44e-965a-4664-a733-dcd26f54096b")
+		(property "Reference" "D8" (at 368.38 212.79 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "SK6812MINI" (at 368.38 215.29 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "LED_SMD:LED_SK6812MINI_PLCC4_3.5x3.5mm_P1.75mm" (at 373.38 224.79 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 373.38 224.79 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "bd8ac7e4-6bc5-4f0c-bc53-2a6f2e70a335"))
+		(pin "2" (uuid "b2f00245-220e-478b-864c-00bf9e82cc20"))
+		(pin "3" (uuid "70d60e8c-dce3-43cb-85ab-7b248f505548"))
+		(pin "4" (uuid "0e5e3444-5f53-41e4-be12-e69bfa56225e"))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "D8") (unit 1))))
+	)
+	(no_connect (at 381 224.79) (uuid "065a0064-f9f1-4e61-8575-965c3b66a5d0"))
+	(wire (pts (xy 373.38 232.41) (xy 373.38 234.95)) (stroke (width 0) (type default)) (uuid "2ec77d45-59ef-437d-aa66-d8cb8348c756"))
+	(label "GND" (at 373.38 234.95 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "8a28b90a-05c6-4e9d-9575-b36ffae42017"))
+	(wire (pts (xy 373.38 217.17) (xy 373.38 214.63)) (stroke (width 0) (type default)) (uuid "b4c22f88-672c-4358-b8a2-2dda9e5ff0cb"))
+	(label "+5V" (at 373.38 214.63 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "8b061452-0f92-4cc5-ac69-862d69eb00c7"))
+	(text "Neopixel decoupling (one 100nF per LED)" (exclude_from_sim no) (at 130 253 0) (effects (font (size 2.54 2.54)) (justify left bottom)) (uuid "5746793f-2337-4230-9c30-fe7ceda4f85a"))
+	(symbol (lib_id "Device:C") (at 134.62 267.97 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "2df66eb6-a861-4d53-83d5-ec4f64c6c6f9")
+		(property "Reference" "C7" (at 136.12 266.7 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "100nF" (at 136.12 269.24 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 134.62 267.97 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 134.62 267.97 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "18f7b1bd-93fe-4df3-958d-21ff5a1c2a11"))
+		(pin "2" (uuid "00bf18dd-97a3-47f3-8048-9591df03eabf"))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "C7") (unit 1))))
+	)
+	(wire (pts (xy 134.62 264.16) (xy 134.62 261.62)) (stroke (width 0) (type default)) (uuid "9f2186ca-9cd0-4cbb-9dfd-cd3fcc4eee84"))
+	(label "+5V" (at 134.62 261.62 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "66238bf5-ff0c-448a-9f70-1231d27adb58"))
+	(wire (pts (xy 134.62 271.78) (xy 134.62 274.32)) (stroke (width 0) (type default)) (uuid "05949c61-121f-422b-8e04-79cb16b10b5f"))
+	(label "GND" (at 134.62 274.32 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "586fd903-4073-49c3-a8fc-ec54ae6c323c"))
+	(symbol (lib_id "Device:C") (at 151.13 267.97 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "7de21f1f-61dc-44dd-83b7-9d082178ceeb")
+		(property "Reference" "C8" (at 152.63 266.7 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "100nF" (at 152.63 269.24 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 151.13 267.97 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 151.13 267.97 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "91197e68-6eb5-4932-808c-08989f68a84f"))
+		(pin "2" (uuid "d9eda6fe-4a3b-4f98-884f-5fef72140257"))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "C8") (unit 1))))
+	)
+	(wire (pts (xy 151.13 264.16) (xy 151.13 261.62)) (stroke (width 0) (type default)) (uuid "b8ed12c6-f69f-47ee-8100-998ca34491f5"))
+	(label "+5V" (at 151.13 261.62 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "bb65ed01-319b-4176-ae78-22956d0c9fec"))
+	(wire (pts (xy 151.13 271.78) (xy 151.13 274.32)) (stroke (width 0) (type default)) (uuid "1311cacf-be3e-4db4-9825-3a84ed1e026d"))
+	(label "GND" (at 151.13 274.32 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "c7d66b9d-2904-415f-aaf4-93610bcb689a"))
+	(symbol (lib_id "Device:C") (at 166.37 267.97 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "e3eebb05-d3f6-4efa-a71f-e913b855cead")
+		(property "Reference" "C9" (at 167.87 266.7 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "100nF" (at 167.87 269.24 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 166.37 267.97 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 166.37 267.97 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "db8cf80c-a947-45d2-84c7-c5b0c20c54c9"))
+		(pin "2" (uuid "9169bc93-6aee-4903-9ced-e88c00e367e0"))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "C9") (unit 1))))
+	)
+	(wire (pts (xy 166.37 264.16) (xy 166.37 261.62)) (stroke (width 0) (type default)) (uuid "ddbcfc87-6066-429f-97b2-acdc76445f19"))
+	(label "+5V" (at 166.37 261.62 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "760a7731-cf07-4b9e-a9d4-5ac216a59904"))
+	(wire (pts (xy 166.37 271.78) (xy 166.37 274.32)) (stroke (width 0) (type default)) (uuid "1d7ab03f-caac-41ec-a019-35a72023664e"))
+	(label "GND" (at 166.37 274.32 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "038526b6-556c-4af1-9b2e-209760b3a78b"))
+	(symbol (lib_id "Device:C") (at 182.88 267.97 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "017bb940-4190-4a82-9012-ba62d09b8fdf")
+		(property "Reference" "C10" (at 184.38 266.7 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "100nF" (at 184.38 269.24 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 182.88 267.97 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 182.88 267.97 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "afe0f21f-b51c-4a68-a7be-c74dc3070750"))
+		(pin "2" (uuid "0e8a938e-4c88-462f-a584-6d51df7d758b"))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "C10") (unit 1))))
+	)
+	(wire (pts (xy 182.88 264.16) (xy 182.88 261.62)) (stroke (width 0) (type default)) (uuid "2774b841-e756-4950-a2c7-97bd0db88474"))
+	(label "+5V" (at 182.88 261.62 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "a8beffc2-1686-4963-bbbe-a611c04adae2"))
+	(wire (pts (xy 182.88 271.78) (xy 182.88 274.32)) (stroke (width 0) (type default)) (uuid "bb513092-edd7-432e-996d-f84b77922563"))
+	(label "GND" (at 182.88 274.32 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "58f23665-b03a-4bc6-8c6f-6c5a8d56f3bd"))
+	(symbol (lib_id "Device:C") (at 199.39 267.97 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "a2cc2692-dc30-45be-b765-fcbae6515bcc")
+		(property "Reference" "C11" (at 200.89 266.7 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "100nF" (at 200.89 269.24 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 199.39 267.97 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 199.39 267.97 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "2abe9c51-d07d-47af-86cc-d8f8f40bf310"))
+		(pin "2" (uuid "5e0dda77-427e-48a8-8f98-47ed332acdbe"))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "C11") (unit 1))))
+	)
+	(wire (pts (xy 199.39 264.16) (xy 199.39 261.62)) (stroke (width 0) (type default)) (uuid "158632f3-9a90-4e20-b855-84649b763fa1"))
+	(label "+5V" (at 199.39 261.62 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "b358d51e-db29-4eeb-ba7a-f8d54635ea7c"))
+	(wire (pts (xy 199.39 271.78) (xy 199.39 274.32)) (stroke (width 0) (type default)) (uuid "5bd5bb8a-788d-470d-8d52-d1a9fdb8385e"))
+	(label "GND" (at 199.39 274.32 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "548950b7-5fff-4eb5-b86d-694d5bc84ad3"))
+	(symbol (lib_id "Device:C") (at 214.63 267.97 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "7c9ce51a-4b6c-4f9f-99c9-9b06bcb02bbb")
+		(property "Reference" "C12" (at 216.13 266.7 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "100nF" (at 216.13 269.24 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 214.63 267.97 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 214.63 267.97 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "99e01d72-f374-4d7d-9c62-a0e942028b72"))
+		(pin "2" (uuid "c7004025-584f-4c11-8bb2-3f1687657e85"))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "C12") (unit 1))))
+	)
+	(wire (pts (xy 214.63 264.16) (xy 214.63 261.62)) (stroke (width 0) (type default)) (uuid "023a6bf3-72e1-4289-9c95-990b4fd87de4"))
+	(label "+5V" (at 214.63 261.62 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "f6e690e5-77fa-405f-ad42-2fe5ad3ab5fb"))
+	(wire (pts (xy 214.63 271.78) (xy 214.63 274.32)) (stroke (width 0) (type default)) (uuid "d30013ee-4454-4ab5-9dd7-bd7a2b52e8c1"))
+	(label "GND" (at 214.63 274.32 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "c44b37f3-cd96-4f7f-a5c4-8afc90c8c9c5"))
+	(symbol (lib_id "Device:C") (at 231.14 267.97 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "965c0ca1-9376-4019-8b8b-dab834bf1e53")
+		(property "Reference" "C13" (at 232.64 266.7 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "100nF" (at 232.64 269.24 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 231.14 267.97 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 231.14 267.97 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "45ae24e4-9b10-4304-a176-d73810c5115f"))
+		(pin "2" (uuid "1f6701d8-dbdb-4455-a214-4a7e6d1df866"))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "C13") (unit 1))))
+	)
+	(wire (pts (xy 231.14 264.16) (xy 231.14 261.62)) (stroke (width 0) (type default)) (uuid "fff6995e-6c4f-4882-81b2-0cec14d1156a"))
+	(label "+5V" (at 231.14 261.62 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "0e824a4f-3f27-4725-a3fd-299ec2d1f8bb"))
+	(wire (pts (xy 231.14 271.78) (xy 231.14 274.32)) (stroke (width 0) (type default)) (uuid "d915d333-697f-476c-b33f-5ace0dfb7ce8"))
+	(label "GND" (at 231.14 274.32 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "7620c392-04dc-46e9-8afb-e3af4d8983a4"))
+	(symbol (lib_id "Device:C") (at 246.38 267.97 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "f5256233-f3f7-4d9a-b739-0542feb73485")
+		(property "Reference" "C14" (at 247.88 266.7 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "100nF" (at 247.88 269.24 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 246.38 267.97 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 246.38 267.97 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "90959746-e7c0-4888-a8ad-073a919f68d9"))
+		(pin "2" (uuid "e1e842e8-e7ba-4eb4-a51d-2a0176e92241"))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "C14") (unit 1))))
+	)
+	(wire (pts (xy 246.38 264.16) (xy 246.38 261.62)) (stroke (width 0) (type default)) (uuid "41c29154-b200-41d0-92da-b1f3438efc86"))
+	(label "+5V" (at 246.38 261.62 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "e0cf3854-0059-4592-b679-f3b059a3c0b9"))
+	(wire (pts (xy 246.38 271.78) (xy 246.38 274.32)) (stroke (width 0) (type default)) (uuid "ff731a43-586e-4d5e-a5e1-df8f2d592887"))
+	(label "GND" (at 246.38 274.32 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "c5ee2040-7420-462c-b6d9-3d485dd1fb6d"))
+	(text "Mechanical" (exclude_from_sim no) (at 25 250 0) (effects (font (size 2.54 2.54)) (justify left bottom)) (uuid "9cfeec6e-6a84-44b4-9ac8-c1288503228d"))
+	(symbol (lib_id "Mechanical:MountingHole") (at 30.48 261.62 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "22c76df0-a4c0-4a05-b56a-83b09b977efb")
+		(property "Reference" "H1" (at 28.48 257.62 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "MountingHole_3.2mm" (at 22.48 265.62 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3" (at 30.48 261.62 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 30.48 261.62 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "H1") (unit 1))))
+	)
+	(symbol (lib_id "Mechanical:MountingHole") (at 44.45 261.62 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "2d7ae9d7-f5ee-48f7-afa2-a528acfa2a52")
+		(property "Reference" "H2" (at 42.45 257.62 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "MountingHole_3.2mm" (at 36.45 265.62 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3" (at 44.45 261.62 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 44.45 261.62 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "H2") (unit 1))))
+	)
+	(symbol (lib_id "Mechanical:MountingHole") (at 59.69 261.62 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "09939f1e-735f-4a73-888e-796895dc37e1")
+		(property "Reference" "H3" (at 57.69 257.62 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "MountingHole_3.2mm" (at 51.69 265.62 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3" (at 59.69 261.62 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 59.69 261.62 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "H3") (unit 1))))
+	)
+	(symbol (lib_id "Mechanical:MountingHole") (at 74.93 261.62 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "3b1f034c-8a0c-44a9-a849-af94ff373c27")
+		(property "Reference" "H4" (at 72.93 257.62 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "MountingHole_3.2mm" (at 66.93 265.62 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3" (at 74.93 261.62 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 74.93 261.62 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "H4") (unit 1))))
+	)
+	(symbol (lib_id "Mechanical:MountingHole") (at 90.17 261.62 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "ed64f336-1de2-4363-ac76-82db7a74fa08")
+		(property "Reference" "H5" (at 88.17 257.62 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "LaserHole1" (at 82.17 265.62 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "MountingHole:MountingHole_6.4mm_M6" (at 90.17 261.62 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 90.17 261.62 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "H5") (unit 1))))
+	)
+	(symbol (lib_id "Mechanical:MountingHole") (at 105.41 261.62 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "0f1935e3-bee7-41e9-971b-196a16a0cd55")
+		(property "Reference" "H6" (at 103.41 257.62 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "LaserHole2" (at 97.41 265.62 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "MountingHole:MountingHole_6.4mm_M6" (at 105.41 261.62 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 105.41 261.62 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "H6") (unit 1))))
+	)
+	(symbol (lib_id "Mechanical:MountingHole") (at 119.38 261.62 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "bea8dcc3-bc20-440a-96ce-dd5c5cb949f7")
+		(property "Reference" "H7" (at 117.38 257.62 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "LaserHole3" (at 111.38 265.62 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "MountingHole:MountingHole_6.4mm_M6" (at 119.38 261.62 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 119.38 261.62 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "H7") (unit 1))))
+	)
+	(symbol (lib_id "Mechanical:MountingHole") (at 134.62 261.62 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "be8f3192-44b3-4311-a78d-a26bba81cfcd")
+		(property "Reference" "H8" (at 132.62 257.62 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "LaserHole4" (at 126.62 265.62 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "MountingHole:MountingHole_6.4mm_M6" (at 134.62 261.62 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 134.62 261.62 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "H8") (unit 1))))
+	)
+	(symbol (lib_id "Mechanical:MountingHole") (at 149.86 261.62 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "056c9ca5-0378-45c2-8ba6-357bf975e7c9")
+		(property "Reference" "H9" (at 147.86 257.62 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "LaserHole5" (at 141.86 265.62 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "MountingHole:MountingHole_6.4mm_M6" (at 149.86 261.62 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 149.86 261.62 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "H9") (unit 1))))
+	)
+	(symbol (lib_id "Mechanical:MountingHole") (at 165.1 261.62 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "4688dea6-28f3-4569-a18e-fe68a0850fea")
+		(property "Reference" "H10" (at 163.1 257.62 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "LaserHole6" (at 157.1 265.62 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "MountingHole:MountingHole_6.4mm_M6" (at 165.1 261.62 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 165.1 261.62 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "H10") (unit 1))))
+	)
+	(symbol (lib_id "Mechanical:MountingHole") (at 180.34 261.62 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "34708ec6-58da-4fd7-b572-5b533f7851bc")
+		(property "Reference" "H11" (at 178.34 257.62 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "LaserHole7" (at 172.34 265.62 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "MountingHole:MountingHole_6.4mm_M6" (at 180.34 261.62 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 180.34 261.62 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "H11") (unit 1))))
+	)
+	(symbol (lib_id "Mechanical:MountingHole") (at 195.58 261.62 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "14705722-3383-4400-91f8-d80cbf45d02b")
+		(property "Reference" "H12" (at 193.58 257.62 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "LaserHole8" (at 187.58 265.62 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "MountingHole:MountingHole_6.4mm_M6" (at 195.58 261.62 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 195.58 261.62 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "laser-harp-base" (path "/cf3798a1-72e5-4ca0-97f4-794237bd79bd" (reference "H12") (unit 1))))
+	)
+	(sheet_instances
+		(path "/" (page "1"))
+	)
+	(embedded_fonts no)
+)
