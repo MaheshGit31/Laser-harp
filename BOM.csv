@@ -19,6 +19,6 @@ item,qty needed,refs,part,package / footprint,board,unit price usd,qty to buy,li
 
 ,,,sourced parts subtotal (low-high),,,,,29.29-31.79,,
 ,,,estimated items,,,,,6.53,,
-,,,parts total (low-high),,,,,35.82-38.32,,"before pcbs, shipping, tax, tariffs"
+,,,parts total (low-high),,,,,35.82-38.32,,"before pcbs, shipping, tax, tariffs",,,
 ,,,"NOT INCLUDED: base + bar pcbs (170mm wide, jlcpcb quote needed), shipping on every order, sales tax, jlcpcb us tariff
 ,,,prices checked 2026-10-23,,,,,,,
