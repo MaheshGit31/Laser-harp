@@ -1,24 +1,18 @@
-item,qty needed,refs,part,package / footprint,board,unit price usd,qty to buy,line cost usd,price status,source / notes
-1,1,U1,ESP32-S3-Zero (waveshare),2x9 pin through-hole module,base,5.49-7.99,1,5.49-7.99,sourced (range),"waveshare.com/product/esp32-s3-zero.htm, price depends on variant and header"
-2,4,U2-U5,LM393DR,SOIC-8,base,0.0326,4,0.13,sourced (from-price),"lcsc C67470, moq not shown"
-3,1,U6,74AHCT1G125,SOT-23-5,base,0.1374,5,0.69,sourced,"lcsc C151417, moq 5"
-4,1,Q1,AO3400A,SOT-23,base,0.0518,5,0.26,sourced (from-price),"lcsc C20917, assumed moq 5"
-5,8,D1-D8,SK6812MINI-E,PLCC4 3.5x3.5mm,base,0.17,66,11.5,sourced (pack),"splitkb 66 pack, EUR 9.88 ex tax converted to about usd 11.50, only sold as a pack"
-6,8,Q1-Q8,PT204-6C,3mm through-hole,bar,0.0683,10,0.68,sourced,"lcsc C98114, moq 10, clear lens (not 6B)"
-7,16,"R1-R8 (base), R1-R8 (bar)",10k,0603,both,0.003,20,0.05,estimated,"lcsc C25804 listed from $0.0011 but out of stock, using similar 0603 as estimate"
-8,3,"R10 100R, R11 100k, R12 330R",100R / 100k / 330R,0603,base,0.01,3,0.03,estimated,not looked up
-9,15,"C1-C5, C7-C15 (base), C1 (bar)",100nF,0603,both,0.0028,100,0.28,sourced,"lcsc C1591, moq 100"
-10,1,C6,100uF 6.3V electrolytic,6.3x5.4mm SMD,base,0.0921,5,0.46,sourced (from-price),"lcsc C336303, moq 5, showed out of stock when checked"
-11,1,RV1,10k trimmer 3296W,Bourns 3296W vertical,base,1.5,1,1.5,estimated,"bourns 3296W-1-103, price not found"
-12,2,"SW1, SW2",6x6mm tactile switch,through-hole,base,0.0456,10,0.46,sourced,"lcsc C2845265, moq 10, 6x6x17mm, check it matches the footprint pitch"
-13,2 + 8,"J1 x2 (1x10), J2-J9 (1x02)",2.54mm pin headers,through-hole,both,1.0,1,1.0,estimated,"break-away strips, not looked up"
-14,8,-,"650nm red laser module, 1mW (class 2)",6x10.5mm barrel,off-board,2.03,8,16.24,sourced,"aliexpress MZLASER store, 1mW variant, https://www.aliexpress.us/item/3256810422634398.html, plus 9.79 shipping for 8 (est total 26.03), delivery nov 2-9, output not verified so check with a power meter"
-15,1,-,10-pin cable (dupont/ribbon),2.54mm,off-board,1.0,1,1.0,estimated,not looked up
-16,2,-,M3 rod or standoffs + nuts + washers,about 100mm tall,off-board,3.0,1,3.0,estimated,not looked up
-17,1,-,usb-c cable,-,off-board,0,0,0,assumed owned,
-
-,,,sourced parts subtotal (low-high),,,,,36.24-38.74,,
-,,,estimated items,,,,,6.53,,
-,,,parts total (low-high),,,,,42.77-45.27,,"before pcbs, shipping, tax, tariffs"
-,,,"NOT INCLUDED: base + bar pcbs (100mm wide, jlcpcb quote needed), shipping on every order, sales tax, jlcpcb us tariff",,,,,,,
-,,,prices checked 2026-10-23,,,,,,,
+part,qty,unit price (usd),vendor,purpose,link,notes
+ESP32-S3-Zero (U1),1,5.49,Waveshare,"brain of the harp, reads the 8 sensors and sends usb midi",https://www.waveshare.com/product/esp32-s3-zero.htm,price depends on variant and header (5.49 to 7.99)
+LM393DR comparator (U2-U5),4,0.0326,LCSC,turns each phototransistor signal into a clean on/off for the esp32,https://www.lcsc.com/product-detail/C67470.html,"from-price, moq not shown"
+74AHCT1G125 level shifter (U6),5,0.1374,LCSC,3.3V to 5V level shift for the neopixel data line,https://www.lcsc.com/product-detail/C151417.html,moq 5
+AO3400A n-mosfet (Q1),5,0.0518,LCSC,switches power to all 8 lasers from the esp32,https://www.lcsc.com/product-detail/C20917.html,"from-price, assumed moq 5"
+SK6812MINI-E LED (D1-D8),66,0.1742,splitkb,"one light under each string, lights up while you play it",,"only sold as a 66 pack, EUR 9.88 ex tax is about usd 11.50"
+PT204-6C phototransistor (bar Q1-Q8),10,0.068,LCSC,"senses each laser beam, clear lens",https://www.lcsc.com/product-detail/C98114.html,"moq 10, clear lens (not 6B)"
+10k resistor 0603 (R1-R8 base and bar),20,0.0025,LCSC,pull-ups and bias for the comparators and phototransistors,https://www.lcsc.com/product-detail/C25804.html,"estimate, listed part was out of stock"
+100R / 100k / 330R resistors 0603 (R10-R12),3,0.01,LCSC,"gate pull-down, laser boot-off and led data resistor",,"estimated, not looked up"
+"100nF capacitor 0603 (C1-C5, C7-C15, bar C1)",100,0.0028,LCSC,"decoupling for chips, leds and the bar",https://www.lcsc.com/product-detail/C1591.html,moq 100
+100uF 6.3V electrolytic 6.3x5.4mm (C6),5,0.092,LCSC,bulk capacitor for lasers and leds,https://www.lcsc.com/product-detail/C336303.html,"moq 5, showed out of stock when checked"
+10k trimmer 3296W (RV1),1,1.5,Digi-Key (Bourns),sets the comparator threshold for all 8 sensors,,"estimated, bourns 3296W-1-103, price not found"
+"6x6mm tactile switch (SW1, SW2)",10,0.046,LCSC,octave and scale buttons,https://www.lcsc.com/product-detail/C2845265.html,"moq 10, check it matches the footprint pitch"
+"2.54mm pin headers (J1 x2 1x10, J2-J9 1x02)",1,1.0,any,board to board link and laser module power,,"estimated, break-away strips"
+650nm red laser module 1mW class 2 6x10.5mm,8,2.03,AliExpress (MZLASER Store),the 8 laser strings,https://www.aliexpress.us/item/3256810422634398.html,"1mW variant, 3V. plus 9.79 shipping for 8, delivery nov 2-9. output not verified, check with a power meter"
+10-pin cable (dupont or ribbon),1,1.0,any,connects the base board to the sensor bar,,estimated
+M3 rod or standoffs + nuts + washers,1,3.0,any hardware store,holds the case and frame together,,estimated
+usb-c cable,1,0,already owned,power and usb midi to the laptop,,assumed owned
